@@ -1,0 +1,20 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "files.encoding": "gbk",
+  "files.associations": {
+    "*.cpp": "cpp",
+    "gui_paint.h": "c",
+    "Screen_api.h": "c",
+    "gpio.h": "c",
+    "drive_screen.h": "c",
+    "string.h": "c",
+    "*.ipp": "c",
+    "ch32v00x_it.h": "c",
+    "*.inc": "c",
+    "ch32v00x_rcc.h": "c",
+    "sx1278.h": "c",
+    "encode.h": "c",
+    "seting.h": "c",
+    "debug.h": "c"
+  }
+}

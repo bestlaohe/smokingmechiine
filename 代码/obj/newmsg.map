@@ -1,0 +1,2129 @@
+Archive member included to satisfy reference by file (symbol)
+
+h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
+                              ./screen/GUI_Paint.o (__riscv_save_2)
+h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(muldi3.o)
+                              ./screen/GUI_Paint.o (__mulsi3)
+h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(div.o)
+                              ./screen/GUI_Paint.o (__divsi3)
+h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcpy.o)
+                              ./Lora/SX1278.o (memcpy)
+h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memset.o)
+                              ./screen/GUI_Paint.o (memset)
+h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strlen.o)
+                              ./screen/page.o (strlen)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 ./screen/GUI_Paint.o
+ .data          0x0000000000000000        0x0 ./screen/GUI_Paint.o
+ .bss           0x0000000000000000        0x0 ./screen/GUI_Paint.o
+ .text.Paint_SetRotate
+                0x0000000000000000       0x26 ./screen/GUI_Paint.o
+ .text.Paint_SetMirroring
+                0x0000000000000000       0x16 ./screen/GUI_Paint.o
+ .text.Paint_ClearWindows
+                0x0000000000000000       0x52 ./screen/GUI_Paint.o
+ .text.Paint_DrawPoint
+                0x0000000000000000       0x20 ./screen/GUI_Paint.o
+ .text.Paint_DrawCircle
+                0x0000000000000000      0x2ec ./screen/GUI_Paint.o
+ .text.Paint_Drawicon
+                0x0000000000000000      0x1a6 ./screen/GUI_Paint.o
+ .text.Paint_DrawString_CN
+                0x0000000000000000      0x10c ./screen/GUI_Paint.o
+ .text.Paint_DrawNum
+                0x0000000000000000       0xca ./screen/GUI_Paint.o
+ .text.Paint_DrawTime
+                0x0000000000000000      0x21c ./screen/GUI_Paint.o
+ .text.Paint_DrawImage
+                0x0000000000000000       0x8e ./screen/GUI_Paint.o
+ .text          0x0000000000000000        0x0 ./screen/drive_screen.o
+ .data          0x0000000000000000        0x0 ./screen/drive_screen.o
+ .bss           0x0000000000000000        0x0 ./screen/drive_screen.o
+ .text.delay_us
+                0x0000000000000000        0x2 ./screen/drive_screen.o
+ .text          0x0000000000000000        0x0 ./screen/font12.o
+ .data          0x0000000000000000        0x0 ./screen/font12.o
+ .bss           0x0000000000000000        0x0 ./screen/font12.o
+ .data.Font12   0x0000000000000000        0x8 ./screen/font12.o
+ .rodata.Font12_Table
+                0x0000000000000000      0x474 ./screen/font12.o
+ .text          0x0000000000000000        0x0 ./screen/font16.o
+ .data          0x0000000000000000        0x0 ./screen/font16.o
+ .bss           0x0000000000000000        0x0 ./screen/font16.o
+ .data.Font16   0x0000000000000000        0x8 ./screen/font16.o
+ .rodata.Font16_Table
+                0x0000000000000000      0xbe0 ./screen/font16.o
+ .text          0x0000000000000000        0x0 ./screen/font24.o
+ .data          0x0000000000000000        0x0 ./screen/font24.o
+ .bss           0x0000000000000000        0x0 ./screen/font24.o
+ .data.Font24CN
+                0x0000000000000000        0xc ./screen/font24.o
+ .data.Font24_En
+                0x0000000000000000        0x8 ./screen/font24.o
+ .data.Font24_Num
+                0x0000000000000000        0x8 ./screen/font24.o
+ .data.Font24_icon
+                0x0000000000000000        0x8 ./screen/font24.o
+ .data.Font24_logo
+                0x0000000000000000        0x8 ./screen/font24.o
+ .rodata.Font24CN_Table
+                0x0000000000000000      0x14c ./screen/font24.o
+ .rodata.Font24_English
+                0x0000000000000000      0x750 ./screen/font24.o
+ .rodata.Font24_Icon
+                0x0000000000000000      0x120 ./screen/font24.o
+ .rodata.Font24_Logo
+                0x0000000000000000      0x120 ./screen/font24.o
+ .rodata.Font24_Number
+                0x0000000000000000      0x2d0 ./screen/font24.o
+ .debug_info    0x0000000000000000      0x330 ./screen/font24.o
+ .debug_abbrev  0x0000000000000000       0xd9 ./screen/font24.o
+ .debug_aranges
+                0x0000000000000000       0x18 ./screen/font24.o
+ .debug_line    0x0000000000000000      0x115 ./screen/font24.o
+ .debug_str     0x0000000000000000      0x2ca ./screen/font24.o
+ .comment       0x0000000000000000       0x34 ./screen/font24.o
+ .text          0x0000000000000000        0x0 ./screen/font8.o
+ .data          0x0000000000000000        0x0 ./screen/font8.o
+ .bss           0x0000000000000000        0x0 ./screen/font8.o
+ .data.Font8    0x0000000000000000        0x8 ./screen/font8.o
+ .data.Font8_En
+                0x0000000000000000        0x8 ./screen/font8.o
+ .data.Font8_Num
+                0x0000000000000000        0x8 ./screen/font8.o
+ .rodata.Font8_English
+                0x0000000000000000       0xd8 ./screen/font8.o
+ .rodata.Font8_Number
+                0x0000000000000000       0x50 ./screen/font8.o
+ .rodata.Font8_Table
+                0x0000000000000000      0x2f8 ./screen/font8.o
+ .debug_info    0x0000000000000000      0x210 ./screen/font8.o
+ .debug_abbrev  0x0000000000000000       0xbb ./screen/font8.o
+ .debug_aranges
+                0x0000000000000000       0x18 ./screen/font8.o
+ .debug_line    0x0000000000000000      0x114 ./screen/font8.o
+ .debug_str     0x0000000000000000      0x271 ./screen/font8.o
+ .comment       0x0000000000000000       0x34 ./screen/font8.o
+ .text          0x0000000000000000        0x0 ./screen/page.o
+ .data          0x0000000000000000        0x0 ./screen/page.o
+ .bss           0x0000000000000000        0x0 ./screen/page.o
+ .text.show_info
+                0x0000000000000000       0xda ./screen/page.o
+ .text.info_page
+                0x0000000000000000       0x94 ./screen/page.o
+ .bss.current_line
+                0x0000000000000000        0x1 ./screen/page.o
+ .bss.total_lines
+                0x0000000000000000        0x1 ./screen/page.o
+ .text          0x0000000000000000        0x0 ./screen/screen_api.o
+ .data          0x0000000000000000        0x0 ./screen/screen_api.o
+ .bss           0x0000000000000000        0x0 ./screen/screen_api.o
+ .text.startup_animation
+                0x0000000000000000      0x102 ./screen/screen_api.o
+ .text.Screen_Display
+                0x0000000000000000       0x78 ./screen/screen_api.o
+ .text.Screen_DisplayWindows
+                0x0000000000000000       0x9a ./screen/screen_api.o
+ .text.Screen_SetBackLight
+                0x0000000000000000       0x22 ./screen/screen_api.o
+ .text          0x0000000000000000        0x0 ./pwm/pwm.o
+ .data          0x0000000000000000        0x0 ./pwm/pwm.o
+ .bss           0x0000000000000000        0x0 ./pwm/pwm.o
+ .text.PWM_Config
+                0x0000000000000000       0x5e ./pwm/pwm.o
+ .debug_info    0x0000000000000000      0xa25 ./pwm/pwm.o
+ .debug_abbrev  0x0000000000000000      0x231 ./pwm/pwm.o
+ .debug_loc     0x0000000000000000       0x8b ./pwm/pwm.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./pwm/pwm.o
+ .debug_ranges  0x0000000000000000       0x10 ./pwm/pwm.o
+ .debug_line    0x0000000000000000      0x301 ./pwm/pwm.o
+ .debug_str     0x0000000000000000      0x5e1 ./pwm/pwm.o
+ .comment       0x0000000000000000       0x34 ./pwm/pwm.o
+ .debug_frame   0x0000000000000000       0x34 ./pwm/pwm.o
+ .text          0x0000000000000000        0x0 ./encode/encode.o
+ .data          0x0000000000000000        0x0 ./encode/encode.o
+ .bss           0x0000000000000000        0x0 ./encode/encode.o
+ .text.Encoder_Init
+                0x0000000000000000       0x18 ./encode/encode.o
+ .text          0x0000000000000000        0x0 ./adc/adc.o
+ .data          0x0000000000000000        0x0 ./adc/adc.o
+ .bss           0x0000000000000000        0x0 ./adc/adc.o
+ .text.Get_ADC_Val
+                0x0000000000000000       0x52 ./adc/adc.o
+ .rodata.adc_points
+                0x0000000000000000        0xa ./adc/adc.o
+ .text          0x0000000000000000        0x0 ./User/ch32v00x_it.o
+ .data          0x0000000000000000        0x0 ./User/ch32v00x_it.o
+ .bss           0x0000000000000000        0x0 ./User/ch32v00x_it.o
+ .text          0x0000000000000000        0x0 ./User/main.o
+ .data          0x0000000000000000        0x0 ./User/main.o
+ .bss           0x0000000000000000        0x0 ./User/main.o
+ .text          0x0000000000000000        0x0 ./User/system_ch32v00x.o
+ .data          0x0000000000000000        0x0 ./User/system_ch32v00x.o
+ .bss           0x0000000000000000        0x0 ./User/system_ch32v00x.o
+ .text          0x0000000000000000        0x0 ./Time/time_app.o
+ .data          0x0000000000000000        0x0 ./Time/time_app.o
+ .bss           0x0000000000000000        0x0 ./Time/time_app.o
+ .text          0x0000000000000000        0x0 ./Startup/startup_ch32v00x.o
+ .data          0x0000000000000000        0x0 ./Startup/startup_ch32v00x.o
+ .bss           0x0000000000000000        0x0 ./Startup/startup_ch32v00x.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_adc.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_adc.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_StructInit
+                0x0000000000000000       0x1a ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_ITConfig
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_GetSoftwareStartConvStatus
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_DiscModeChannelCountConfig
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_DiscModeCmd
+                0x0000000000000000       0x1a ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_ExternalTrigConvCmd
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_GetConversionValue
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_AutoInjectedConvCmd
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_InjectedDiscModeCmd
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_ExternalTrigInjectedConvConfig
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_ExternalTrigInjectedConvCmd
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_SoftwareStartInjectedConvCmd
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_GetSoftwareStartInjectedConvCmdStatus
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_InjectedChannelConfig
+                0x0000000000000000       0x7a ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_InjectedSequencerLengthConfig
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_SetInjectedOffset
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_GetInjectedConversionValue
+                0x0000000000000000       0x1c ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_AnalogWatchdogCmd
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_AnalogWatchdogThresholdsConfig
+                0x0000000000000000        0x6 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_AnalogWatchdogSingleChannelConfig
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_GetFlagStatus
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_ClearFlag
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_GetITStatus
+                0x0000000000000000       0x1c ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_ClearITPendingBit
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_adc.o
+ .text.ADC_ExternalTrig_DLY
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_adc.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_dbgmcu.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_dbgmcu.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_dbgmcu.o
+ .text.DBGMCU_GetREVID
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_dbgmcu.o
+ .text.DBGMCU_GetDEVID
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_dbgmcu.o
+ .text.__get_DEBUG_CR
+                0x0000000000000000        0x6 ./Peripheral/src/ch32v00x_dbgmcu.o
+ .text.__set_DEBUG_CR
+                0x0000000000000000        0x6 ./Peripheral/src/ch32v00x_dbgmcu.o
+ .text.DBGMCU_Config
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_dbgmcu.o
+ .text.DBGMCU_GetCHIPID
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_dbgmcu.o
+ .debug_info    0x0000000000000000      0xb14 ./Peripheral/src/ch32v00x_dbgmcu.o
+ .debug_abbrev  0x0000000000000000      0x30d ./Peripheral/src/ch32v00x_dbgmcu.o
+ .debug_loc     0x0000000000000000       0x7c ./Peripheral/src/ch32v00x_dbgmcu.o
+ .debug_aranges
+                0x0000000000000000       0x48 ./Peripheral/src/ch32v00x_dbgmcu.o
+ .debug_ranges  0x0000000000000000       0x50 ./Peripheral/src/ch32v00x_dbgmcu.o
+ .debug_line    0x0000000000000000      0x36c ./Peripheral/src/ch32v00x_dbgmcu.o
+ .debug_str     0x0000000000000000      0x679 ./Peripheral/src/ch32v00x_dbgmcu.o
+ .comment       0x0000000000000000       0x34 ./Peripheral/src/ch32v00x_dbgmcu.o
+ .debug_frame   0x0000000000000000       0x70 ./Peripheral/src/ch32v00x_dbgmcu.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_dma.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_dma.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_dma.o
+ .text.DMA_StructInit
+                0x0000000000000000       0x2e ./Peripheral/src/ch32v00x_dma.o
+ .text.DMA_SetCurrDataCounter
+                0x0000000000000000        0x4 ./Peripheral/src/ch32v00x_dma.o
+ .text.DMA_GetCurrDataCounter
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_dma.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_exti.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_exti.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_exti.o
+ .text.EXTI_DeInit
+                0x0000000000000000       0x22 ./Peripheral/src/ch32v00x_exti.o
+ .text.EXTI_StructInit
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_exti.o
+ .text.EXTI_GenerateSWInterrupt
+                0x0000000000000000       0x10 ./Peripheral/src/ch32v00x_exti.o
+ .text.EXTI_GetFlagStatus
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_exti.o
+ .text.EXTI_ClearFlag
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_exti.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_flash.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_flash.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_flash.o
+ .text.ROM_ERASE
+                0x0000000000000000       0x60 ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_SetLatency
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_Unlock
+                0x0000000000000000       0x1a ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_Lock
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_GetUserOptionByte
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_GetWriteProtectionOptionByte
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_GetReadOutProtectionStatus
+                0x0000000000000000        0xc ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_ITConfig
+                0x0000000000000000       0x1e ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_GetFlagStatus
+                0x0000000000000000       0x1e ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_ClearFlag
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_GetStatus
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_GetBank1Status
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_WaitForLastOperation
+                0x0000000000000000       0x34 ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_ErasePage
+                0x0000000000000000       0x4c ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_EraseAllPages
+                0x0000000000000000       0x48 ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_EraseOptionBytes
+                0x0000000000000000       0x9a ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_ProgramWord
+                0x0000000000000000       0x6e ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_ProgramHalfWord
+                0x0000000000000000       0x48 ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_ProgramOptionByteData
+                0x0000000000000000       0x66 ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_EnableWriteProtection
+                0x0000000000000000       0x9e ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_ReadOutProtection
+                0x0000000000000000       0xae ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_UserOptionByteConfig
+                0x0000000000000000       0x7a ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_WaitForLastBank1Operation
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_Unlock_Fast
+                0x0000000000000000       0x1e ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_Lock_Fast
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_BufReset
+                0x0000000000000000       0x28 ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_BufLoad
+                0x0000000000000000       0x36 ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_ErasePage_Fast
+                0x0000000000000000       0x36 ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_ProgramPage_Fast
+                0x0000000000000000       0x34 ./Peripheral/src/ch32v00x_flash.o
+ .text.SystemReset_StartMode
+                0x0000000000000000       0x56 ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_ROM_ERASE
+                0x0000000000000000      0x140 ./Peripheral/src/ch32v00x_flash.o
+ .text.FLASH_ROM_WRITE
+                0x0000000000000000       0xf6 ./Peripheral/src/ch32v00x_flash.o
+ .debug_info    0x0000000000000000     0x14d1 ./Peripheral/src/ch32v00x_flash.o
+ .debug_abbrev  0x0000000000000000      0x409 ./Peripheral/src/ch32v00x_flash.o
+ .debug_loc     0x0000000000000000      0xad0 ./Peripheral/src/ch32v00x_flash.o
+ .debug_aranges
+                0x0000000000000000      0x110 ./Peripheral/src/ch32v00x_flash.o
+ .debug_ranges  0x0000000000000000      0x100 ./Peripheral/src/ch32v00x_flash.o
+ .debug_line    0x0000000000000000     0x1c0b ./Peripheral/src/ch32v00x_flash.o
+ .debug_str     0x0000000000000000      0xac2 ./Peripheral/src/ch32v00x_flash.o
+ .comment       0x0000000000000000       0x34 ./Peripheral/src/ch32v00x_flash.o
+ .debug_frame   0x0000000000000000      0x324 ./Peripheral/src/ch32v00x_flash.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_gpio.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_gpio.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_gpio.o
+ .text.GPIO_DeInit
+                0x0000000000000000       0x68 ./Peripheral/src/ch32v00x_gpio.o
+ .text.GPIO_AFIODeInit
+                0x0000000000000000       0x28 ./Peripheral/src/ch32v00x_gpio.o
+ .text.GPIO_StructInit
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_gpio.o
+ .text.GPIO_ReadInputData
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_gpio.o
+ .text.GPIO_ReadOutputData
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_gpio.o
+ .text.GPIO_WriteBit
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_gpio.o
+ .text.GPIO_Write
+                0x0000000000000000        0x4 ./Peripheral/src/ch32v00x_gpio.o
+ .text.GPIO_PinLockConfig
+                0x0000000000000000       0x10 ./Peripheral/src/ch32v00x_gpio.o
+ .text.GPIO_PinRemapConfig
+                0x0000000000000000       0xc4 ./Peripheral/src/ch32v00x_gpio.o
+ .text.GPIO_IPD_Unused
+                0x0000000000000000       0xa4 ./Peripheral/src/ch32v00x_gpio.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_i2c.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_i2c.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_DeInit
+                0x0000000000000000       0x3a ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_Init
+                0x0000000000000000      0x100 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_StructInit
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_Cmd  0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_DMACmd
+                0x0000000000000000       0x1e ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_DMALastTransferCmd
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_GenerateSTART
+                0x0000000000000000       0x1a ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_GenerateSTOP
+                0x0000000000000000       0x1a ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_AcknowledgeConfig
+                0x0000000000000000       0x1a ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_OwnAddress2Config
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_DualAddressCmd
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_GeneralCallCmd
+                0x0000000000000000       0x1a ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_ITConfig
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_SendData
+                0x0000000000000000        0x4 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_ReceiveData
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_Send7bitAddress
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_ReadRegister
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_SoftwareResetCmd
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_NACKPositionConfig
+                0x0000000000000000       0x22 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_TransmitPEC
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_PECPositionConfig
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_CalculatePEC
+                0x0000000000000000       0x1a ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_GetPEC
+                0x0000000000000000        0x6 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_ARPCmd
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_StretchClockCmd
+                0x0000000000000000       0x1a ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_FastModeDutyCycleConfig
+                0x0000000000000000       0x1a ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_CheckEvent
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_GetLastEvent
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_GetFlagStatus
+                0x0000000000000000       0x32 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_ClearFlag
+                0x0000000000000000        0xc ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_GetITStatus
+                0x0000000000000000       0x20 ./Peripheral/src/ch32v00x_i2c.o
+ .text.I2C_ClearITPendingBit
+                0x0000000000000000        0xc ./Peripheral/src/ch32v00x_i2c.o
+ .debug_info    0x0000000000000000     0x1467 ./Peripheral/src/ch32v00x_i2c.o
+ .debug_abbrev  0x0000000000000000      0x3b6 ./Peripheral/src/ch32v00x_i2c.o
+ .debug_loc     0x0000000000000000      0x720 ./Peripheral/src/ch32v00x_i2c.o
+ .debug_aranges
+                0x0000000000000000      0x108 ./Peripheral/src/ch32v00x_i2c.o
+ .debug_ranges  0x0000000000000000       0xf8 ./Peripheral/src/ch32v00x_i2c.o
+ .debug_line    0x0000000000000000     0x1060 ./Peripheral/src/ch32v00x_i2c.o
+ .debug_str     0x0000000000000000      0xabf ./Peripheral/src/ch32v00x_i2c.o
+ .comment       0x0000000000000000       0x34 ./Peripheral/src/ch32v00x_i2c.o
+ .debug_frame   0x0000000000000000      0x254 ./Peripheral/src/ch32v00x_i2c.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_iwdg.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_iwdg.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_iwdg.o
+ .text.IWDG_GetFlagStatus
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_iwdg.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_misc.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_misc.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_misc.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_opa.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_opa.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_opa.o
+ .text.OPA_DeInit
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_opa.o
+ .text.OPA_Init
+                0x0000000000000000       0x22 ./Peripheral/src/ch32v00x_opa.o
+ .text.OPA_StructInit
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_opa.o
+ .text.OPA_Cmd  0x0000000000000000       0x2c ./Peripheral/src/ch32v00x_opa.o
+ .debug_info    0x0000000000000000      0xb25 ./Peripheral/src/ch32v00x_opa.o
+ .debug_abbrev  0x0000000000000000      0x23f ./Peripheral/src/ch32v00x_opa.o
+ .debug_loc     0x0000000000000000       0x35 ./Peripheral/src/ch32v00x_opa.o
+ .debug_aranges
+                0x0000000000000000       0x38 ./Peripheral/src/ch32v00x_opa.o
+ .debug_ranges  0x0000000000000000       0x28 ./Peripheral/src/ch32v00x_opa.o
+ .debug_line    0x0000000000000000      0x3c7 ./Peripheral/src/ch32v00x_opa.o
+ .debug_str     0x0000000000000000      0x69a ./Peripheral/src/ch32v00x_opa.o
+ .comment       0x0000000000000000       0x34 ./Peripheral/src/ch32v00x_opa.o
+ .debug_frame   0x0000000000000000       0x50 ./Peripheral/src/ch32v00x_opa.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_pwr.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_pwr.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_pwr.o
+ .text.PWR_DeInit
+                0x0000000000000000       0x2c ./Peripheral/src/ch32v00x_pwr.o
+ .text.PWR_PVDCmd
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_pwr.o
+ .text.PWR_PVDLevelConfig
+                0x0000000000000000       0x10 ./Peripheral/src/ch32v00x_pwr.o
+ .text.PWR_GetFlagStatus
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_pwr.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_rcc.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_rcc.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_HSEConfig
+                0x0000000000000000       0x3c ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_DeInit
+                0x0000000000000000       0x58 ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_HSICmd
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_PLLConfig
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_PLLCmd
+                0x0000000000000000       0x24 ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_SYSCLKConfig
+                0x0000000000000000       0x4e ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_GetSYSCLKSource
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_HCLKConfig
+                0x0000000000000000       0x10 ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_ITConfig
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_LSICmd
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_ClockSecuritySystemCmd
+                0x0000000000000000       0x24 ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_MCOConfig
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_WaitForHSEStartUp
+                0x0000000000000000       0x42 ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_ClearFlag
+                0x0000000000000000       0x10 ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_GetITStatus
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_rcc.o
+ .text.RCC_ClearITPendingBit
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_rcc.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_spi.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_spi.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_spi.o
+ .text.SPI_I2S_DeInit
+                0x0000000000000000       0x32 ./Peripheral/src/ch32v00x_spi.o
+ .text.SPI_StructInit
+                0x0000000000000000       0x22 ./Peripheral/src/ch32v00x_spi.o
+ .text.SPI_I2S_ITConfig
+                0x0000000000000000       0x1e ./Peripheral/src/ch32v00x_spi.o
+ .text.SPI_NSSInternalSoftwareConfig
+                0x0000000000000000       0x24 ./Peripheral/src/ch32v00x_spi.o
+ .text.SPI_SSOutputCmd
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_spi.o
+ .text.SPI_DataSizeConfig
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_spi.o
+ .text.SPI_TransmitCRC
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_spi.o
+ .text.SPI_CalculateCRC
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_spi.o
+ .text.SPI_GetCRC
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_spi.o
+ .text.SPI_GetCRCPolynomial
+                0x0000000000000000        0x4 ./Peripheral/src/ch32v00x_spi.o
+ .text.SPI_BiDirectionalLineConfig
+                0x0000000000000000       0x1a ./Peripheral/src/ch32v00x_spi.o
+ .text.SPI_I2S_ClearFlag
+                0x0000000000000000        0xc ./Peripheral/src/ch32v00x_spi.o
+ .text.SPI_I2S_GetITStatus
+                0x0000000000000000       0x28 ./Peripheral/src/ch32v00x_spi.o
+ .text.SPI_I2S_ClearITPendingBit
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_spi.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_tim.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_tim.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_DeInit
+                0x0000000000000000       0x5c ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC1Init
+                0x0000000000000000       0x6a ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC2Init
+                0x0000000000000000       0x96 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC4Init
+                0x0000000000000000       0x6e ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_BDTRConfig
+                0x0000000000000000       0x20 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OCStructInit
+                0x0000000000000000       0x22 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_ICStructInit
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_BDTRStructInit
+                0x0000000000000000       0x1e ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_GenerateEvent
+                0x0000000000000000        0x4 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_DMAConfig
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_DMACmd
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_InternalClockConfig
+                0x0000000000000000       0x10 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_ITRxExternalClockConfig
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_TIxExternalClockConfig
+                0x0000000000000000       0x48 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_ETRConfig
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_ETRClockMode1Config
+                0x0000000000000000       0x2a ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_ETRClockMode2Config
+                0x0000000000000000       0x22 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_PrescalerConfig
+                0x0000000000000000        0x6 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_CounterModeConfig
+                0x0000000000000000       0x10 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SelectInputTrigger
+                0x0000000000000000       0x10 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_ForcedOC1Config
+                0x0000000000000000       0x10 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_ForcedOC2Config
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_ForcedOC3Config
+                0x0000000000000000       0x10 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_ForcedOC4Config
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SelectCOM
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SelectCCDMA
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_CCPreloadControl
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC1PreloadConfig
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC2PreloadConfig
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC4PreloadConfig
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC1FastConfig
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC2FastConfig
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC3FastConfig
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC4FastConfig
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_ClearOC1Ref
+                0x0000000000000000       0x10 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_ClearOC2Ref
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_ClearOC3Ref
+                0x0000000000000000       0x10 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_ClearOC4Ref
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC1PolarityConfig
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC1NPolarityConfig
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC2PolarityConfig
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC2NPolarityConfig
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC3PolarityConfig
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC3NPolarityConfig
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_OC4PolarityConfig
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_CCxCmd
+                0x0000000000000000       0x20 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_CCxNCmd
+                0x0000000000000000       0x20 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SelectOCxM
+                0x0000000000000000       0x4c ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_UpdateDisableConfig
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_UpdateRequestConfig
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SelectHallSensor
+                0x0000000000000000       0x1a ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SelectOnePulseMode
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SelectOutputTrigger
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SelectSlaveMode
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SelectMasterSlaveMode
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SetAutoreload
+                0x0000000000000000        0x4 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SetCompare1
+                0x0000000000000000        0x4 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SetCompare2
+                0x0000000000000000        0x4 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SetCompare3
+                0x0000000000000000        0x4 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SetCompare4
+                0x0000000000000000        0x4 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_PWMIConfig
+                0x0000000000000000       0xa4 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SetIC3Prescaler
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SetIC4Prescaler
+                0x0000000000000000       0x1a ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_SetClockDivision
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_GetCapture1
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_GetCapture2
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_GetCapture3
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_GetCapture4
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_GetCounter
+                0x0000000000000000        0x4 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_GetPrescaler
+                0x0000000000000000        0x4 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_GetFlagStatus
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_IndicateCaptureLevelCmd
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_tim.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_usart.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_usart.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_StructInit
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_ClockInit
+                0x0000000000000000       0x1e ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_ClockStructInit
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_ITConfig
+                0x0000000000000000       0x36 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_DMACmd
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_SetAddress
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_WakeUpConfig
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_ReceiverWakeUpCmd
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_LINBreakDetectLengthConfig
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_LINCmd
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_SendData
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_ReceiveData
+                0x0000000000000000        0x8 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_SendBreak
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_SetGuardTime
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_SetPrescaler
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_SmartCardCmd
+                0x0000000000000000       0x1a ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_SmartCardNACKCmd
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_HalfDuplexCmd
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_OverSampling8Cmd
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_OneBitMethodCmd
+                0x0000000000000000       0x1e ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_IrDAConfig
+                0x0000000000000000       0x16 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_IrDACmd
+                0x0000000000000000       0x18 ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_GetFlagStatus
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_ClearFlag
+                0x0000000000000000        0xc ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_GetITStatus
+                0x0000000000000000       0x3c ./Peripheral/src/ch32v00x_usart.o
+ .text.USART_ClearITPendingBit
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_usart.o
+ .text          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_wwdg.o
+ .data          0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_wwdg.o
+ .bss           0x0000000000000000        0x0 ./Peripheral/src/ch32v00x_wwdg.o
+ .text.WWDG_DeInit
+                0x0000000000000000       0x2e ./Peripheral/src/ch32v00x_wwdg.o
+ .text.WWDG_SetPrescaler
+                0x0000000000000000       0x14 ./Peripheral/src/ch32v00x_wwdg.o
+ .text.WWDG_SetWindowValue
+                0x0000000000000000       0x26 ./Peripheral/src/ch32v00x_wwdg.o
+ .text.WWDG_EnableIT
+                0x0000000000000000       0x12 ./Peripheral/src/ch32v00x_wwdg.o
+ .text.WWDG_SetCounter
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_wwdg.o
+ .text.WWDG_Enable
+                0x0000000000000000        0xe ./Peripheral/src/ch32v00x_wwdg.o
+ .text.WWDG_GetFlagStatus
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_wwdg.o
+ .text.WWDG_ClearFlag
+                0x0000000000000000        0xa ./Peripheral/src/ch32v00x_wwdg.o
+ .debug_info    0x0000000000000000      0xb8f ./Peripheral/src/ch32v00x_wwdg.o
+ .debug_abbrev  0x0000000000000000      0x2ac ./Peripheral/src/ch32v00x_wwdg.o
+ .debug_loc     0x0000000000000000       0xae ./Peripheral/src/ch32v00x_wwdg.o
+ .debug_aranges
+                0x0000000000000000       0x58 ./Peripheral/src/ch32v00x_wwdg.o
+ .debug_ranges  0x0000000000000000       0x48 ./Peripheral/src/ch32v00x_wwdg.o
+ .debug_line    0x0000000000000000      0x475 ./Peripheral/src/ch32v00x_wwdg.o
+ .debug_str     0x0000000000000000      0x6d3 ./Peripheral/src/ch32v00x_wwdg.o
+ .comment       0x0000000000000000       0x34 ./Peripheral/src/ch32v00x_wwdg.o
+ .debug_frame   0x0000000000000000       0xa4 ./Peripheral/src/ch32v00x_wwdg.o
+ .text          0x0000000000000000        0x0 ./Lora/SX1278.o
+ .data          0x0000000000000000        0x0 ./Lora/SX1278.o
+ .bss           0x0000000000000000        0x0 ./Lora/SX1278.o
+ .text.SX1276ReadReg
+                0x0000000000000000       0x5c ./Lora/SX1278.o
+ .text.SX1278_LoRaReadRSSI
+                0x0000000000000000       0x20 ./Lora/SX1278.o
+ .text.SX1278_ReadRSSI
+                0x0000000000000000       0x28 ./Lora/SX1278.o
+ .text          0x0000000000000000        0x0 ./Gpio/gpio.o
+ .data          0x0000000000000000        0x0 ./Gpio/gpio.o
+ .bss           0x0000000000000000        0x0 ./Gpio/gpio.o
+ .text.My_GPIO_DeInit
+                0x0000000000000000       0x38 ./Gpio/gpio.o
+ .text          0x0000000000000000        0x0 ./Debug/debug.o
+ .data          0x0000000000000000        0x0 ./Debug/debug.o
+ .bss           0x0000000000000000        0x0 ./Debug/debug.o
+ .text.Delay_Us
+                0x0000000000000000       0x4a ./Debug/debug.o
+ .text.SDI_Printf_Enable
+                0x0000000000000000       0x2a ./Debug/debug.o
+ .text.my_uart_print
+                0x0000000000000000       0x50 ./Debug/debug.o
+ .text._write   0x0000000000000000       0x60 ./Debug/debug.o
+ .text._sbrk    0x0000000000000000       0x2e ./Debug/debug.o
+ .text.Check_Reset_Flag
+                0x0000000000000000       0x48 ./Debug/debug.o
+ .data.curbrk.4218
+                0x0000000000000000        0x4 ./Debug/debug.o
+ .text          0x0000000000000000        0x0 ./Core/core_riscv.o
+ .data          0x0000000000000000        0x0 ./Core/core_riscv.o
+ .bss           0x0000000000000000        0x0 ./Core/core_riscv.o
+ .text.__get_MSTATUS
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__set_MSTATUS
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__get_MISA
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__set_MISA
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__get_MTVEC
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__set_MTVEC
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__get_MSCRATCH
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__set_MSCRATCH
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__get_MEPC
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__set_MEPC
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__get_MCAUSE
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__set_MCAUSE
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__get_MVENDORID
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__get_MARCHID
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__get_MIMPID
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__get_MHARTID
+                0x0000000000000000        0x6 ./Core/core_riscv.o
+ .text.__get_SP
+                0x0000000000000000        0x4 ./Core/core_riscv.o
+ .debug_info    0x0000000000000000      0x324 ./Core/core_riscv.o
+ .debug_abbrev  0x0000000000000000       0xe0 ./Core/core_riscv.o
+ .debug_aranges
+                0x0000000000000000       0xa0 ./Core/core_riscv.o
+ .debug_ranges  0x0000000000000000       0x90 ./Core/core_riscv.o
+ .debug_line    0x0000000000000000      0x3f2 ./Core/core_riscv.o
+ .debug_str     0x0000000000000000      0x26c ./Core/core_riscv.o
+ .comment       0x0000000000000000       0x34 ./Core/core_riscv.o
+ .debug_frame   0x0000000000000000      0x120 ./Core/core_riscv.o
+ .data          0x0000000000000000        0x0 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
+ .bss           0x0000000000000000        0x0 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
+ .eh_frame      0x0000000000000000       0x68 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
+ .data          0x0000000000000000        0x0 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(muldi3.o)
+ .bss           0x0000000000000000        0x0 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(muldi3.o)
+ .data          0x0000000000000000        0x0 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(div.o)
+ .bss           0x0000000000000000        0x0 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(div.o)
+ .text          0x0000000000000000        0x0 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcpy.o)
+ .data          0x0000000000000000        0x0 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcpy.o)
+ .data          0x0000000000000000        0x0 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strlen.o)
+ .data          0x0000000000000000        0x0 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strlen.o)
+ .bss           0x0000000000000000        0x0 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strlen.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000000000000 0x0000000000004000 xr
+RAM              0x0000000020000000 0x0000000000000800 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ./screen/GUI_Paint.o
+LOAD ./screen/drive_screen.o
+LOAD ./screen/font12.o
+LOAD ./screen/font16.o
+LOAD ./screen/font24.o
+LOAD ./screen/font8.o
+LOAD ./screen/page.o
+LOAD ./screen/screen_api.o
+LOAD ./pwm/pwm.o
+LOAD ./encode/encode.o
+LOAD ./adc/adc.o
+LOAD ./User/ch32v00x_it.o
+LOAD ./User/main.o
+LOAD ./User/system_ch32v00x.o
+LOAD ./Time/time_app.o
+LOAD ./Startup/startup_ch32v00x.o
+LOAD ./Peripheral/src/ch32v00x_adc.o
+LOAD ./Peripheral/src/ch32v00x_dbgmcu.o
+LOAD ./Peripheral/src/ch32v00x_dma.o
+LOAD ./Peripheral/src/ch32v00x_exti.o
+LOAD ./Peripheral/src/ch32v00x_flash.o
+LOAD ./Peripheral/src/ch32v00x_gpio.o
+LOAD ./Peripheral/src/ch32v00x_i2c.o
+LOAD ./Peripheral/src/ch32v00x_iwdg.o
+LOAD ./Peripheral/src/ch32v00x_misc.o
+LOAD ./Peripheral/src/ch32v00x_opa.o
+LOAD ./Peripheral/src/ch32v00x_pwr.o
+LOAD ./Peripheral/src/ch32v00x_rcc.o
+LOAD ./Peripheral/src/ch32v00x_spi.o
+LOAD ./Peripheral/src/ch32v00x_tim.o
+LOAD ./Peripheral/src/ch32v00x_usart.o
+LOAD ./Peripheral/src/ch32v00x_wwdg.o
+LOAD ./Lora/SX1278.o
+LOAD ./Gpio/gpio.o
+LOAD ./Debug/debug.o
+LOAD ./Core/core_riscv.o
+LOAD h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libprintf.a
+LOAD h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a
+LOAD h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a
+LOAD h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libc_nano.a
+LOAD h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a
+START GROUP
+LOAD h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a
+LOAD h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libc_nano.a
+LOAD h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a
+END GROUP
+START GROUP
+LOAD h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a
+LOAD h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libc_nano.a
+LOAD h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libnosys.a
+END GROUP
+                0x0000000000000100                __stack_size = 0x100
+                [!provide]                        PROVIDE (_stack_size = __stack_size)
+
+.init           0x0000000000000000       0xa0
+                0x0000000000000000                _sinit = .
+                0x0000000000000000                . = ALIGN (0x4)
+ *(SORT_NONE(.init))
+ .init          0x0000000000000000       0x9e ./Startup/startup_ch32v00x.o
+                0x0000000000000000                _start
+                0x00000000000000a0                . = ALIGN (0x4)
+ *fill*         0x000000000000009e        0x2 
+                0x00000000000000a0                _einit = .
+
+.text           0x00000000000000a0     0x3e48
+                0x00000000000000a0                . = ALIGN (0x4)
+ *(.text)
+ .text          0x00000000000000a0       0x14 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(save-restore.o)
+                0x00000000000000a0                __riscv_save_1
+                0x00000000000000a0                __riscv_save_2
+                0x00000000000000a0                __riscv_save_0
+                0x00000000000000aa                __riscv_restore_0
+                0x00000000000000aa                __riscv_restore_1
+                0x00000000000000aa                __riscv_restore_2
+ .text          0x00000000000000b4       0x16 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(muldi3.o)
+                0x00000000000000b4                __mulsi3
+ *fill*         0x00000000000000ca        0x2 
+ .text          0x00000000000000cc       0x7e h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32ecxw/ilp32e\libgcc.a(div.o)
+                0x00000000000000cc                __divsi3
+                0x00000000000000d4                __udivsi3
+                0x0000000000000100                __umodsi3
+                0x0000000000000124                __modsi3
+ .text          0x000000000000014a       0xa8 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memset.o)
+                0x000000000000014a                memset
+ *(.text.*)
+ .text.Paint_NewImage
+                0x00000000000001f2       0x32 ./screen/GUI_Paint.o
+                0x00000000000001f2                Paint_NewImage
+ .text.Paint_SetPixel
+                0x0000000000000224       0x70 ./screen/GUI_Paint.o
+                0x0000000000000224                Paint_SetPixel
+ .text.Paint_DrawPoint.part.0
+                0x0000000000000294       0xa4 ./screen/GUI_Paint.o
+ .text.Paint_DrawLine
+                0x0000000000000338      0x10e ./screen/GUI_Paint.o
+                0x0000000000000338                Paint_DrawLine
+ .text.Paint_DrawRectangle
+                0x0000000000000446       0x72 ./screen/GUI_Paint.o
+                0x0000000000000446                Paint_DrawRectangle
+ .text.Paint_DrawChar
+                0x00000000000004b8      0x17e ./screen/GUI_Paint.o
+                0x00000000000004b8                Paint_DrawChar
+ .text.Paint_DrawString
+                0x0000000000000636       0xc8 ./screen/GUI_Paint.o
+                0x0000000000000636                Paint_DrawString
+ .text.SPI_FullDuplex_Init
+                0x00000000000006fe       0x48 ./screen/drive_screen.o
+                0x00000000000006fe                SPI_FullDuplex_Init
+ .text.SPI_DMA_Tx_Init
+                0x0000000000000746       0x7a ./screen/drive_screen.o
+                0x0000000000000746                SPI_DMA_Tx_Init
+ .text.Screen_spi_write
+                0x00000000000007c0       0x6e ./screen/drive_screen.o
+                0x00000000000007c0                Screen_spi_write
+ .text.handle_lora_msg
+                0x000000000000082e       0x66 ./screen/page.o
+                0x000000000000082e                handle_lora_msg
+ .text.handle_chat_event
+                0x0000000000000894      0x1f0 ./screen/page.o
+                0x0000000000000894                handle_chat_event
+ .text.show_history_data
+                0x0000000000000a84       0x60 ./screen/page.o
+                0x0000000000000a84                show_history_data
+ .text.chat_page
+                0x0000000000000ae4       0xc0 ./screen/page.o
+                0x0000000000000ae4                chat_page
+ .text.perpare_setting_page
+                0x0000000000000ba4       0x8a ./screen/page.o
+                0x0000000000000ba4                perpare_setting_page
+ .text.clamp_value
+                0x0000000000000c2e       0x12 ./screen/page.o
+                0x0000000000000c2e                clamp_value
+ .text.update_setting_value
+                0x0000000000000c40       0x2e ./screen/page.o
+                0x0000000000000c40                update_setting_value
+ .text.update_current_setting
+                0x0000000000000c6e       0x88 ./screen/page.o
+                0x0000000000000c6e                update_current_setting
+ .text.draw_setting
+                0x0000000000000cf6      0x212 ./screen/page.o
+                0x0000000000000cf6                draw_setting
+ .text.display_settings
+                0x0000000000000f08       0x3c ./screen/page.o
+                0x0000000000000f08                display_settings
+ .text.handle_setting_event
+                0x0000000000000f44       0x90 ./screen/page.o
+                0x0000000000000f44                handle_setting_event
+ .text.setting_page
+                0x0000000000000fd4       0x40 ./screen/page.o
+                0x0000000000000fd4                setting_page
+ .text.show_page
+                0x0000000000001014       0xde ./screen/page.o
+                0x0000000000001014                show_page
+ .text.Screen_SendData_8Bit
+                0x00000000000010f2       0x2e ./screen/screen_api.o
+ .text.Screen_SendCommand
+                0x0000000000001120       0x2e ./screen/screen_api.o
+                0x0000000000001120                Screen_SendCommand
+ .text.Screen_EnterSleepMode
+                0x000000000000114e       0x12 ./screen/screen_api.o
+                0x000000000000114e                Screen_EnterSleepMode
+ .text.LCD_Drive_DeInit
+                0x0000000000001160       0x52 ./screen/screen_api.o
+                0x0000000000001160                LCD_Drive_DeInit
+ .text.Screen_ExitSleepMode
+                0x00000000000011b2       0x14 ./screen/screen_api.o
+                0x00000000000011b2                Screen_ExitSleepMode
+ .text.LCD_Drive_Init
+                0x00000000000011c6       0x44 ./screen/screen_api.o
+                0x00000000000011c6                LCD_Drive_Init
+ .text.Screen_Init
+                0x000000000000120a       0xe0 ./screen/screen_api.o
+                0x000000000000120a                Screen_Init
+ .text.Screen_SetWindows
+                0x00000000000012ea       0x7a ./screen/screen_api.o
+                0x00000000000012ea                Screen_SetWindows
+ .text.Screen_Clear
+                0x0000000000001364      0x14a ./screen/screen_api.o
+                0x0000000000001364                Screen_Clear
+ .text.LCD_SHOW_API_INIT
+                0x00000000000014ae       0x2e ./screen/screen_api.o
+                0x00000000000014ae                LCD_SHOW_API_INIT
+ .text.LCD_Refrsh_DMA
+                0x00000000000014dc      0x112 ./screen/screen_api.o
+                0x00000000000014dc                LCD_Refrsh_DMA
+ .text.Screen_DrawPaint
+                0x00000000000015ee       0x6c ./screen/screen_api.o
+                0x00000000000015ee                Screen_DrawPaint
+ .text.Encoder_Scan
+                0x000000000000165a       0xb2 ./encode/encode.o
+                0x000000000000165a                Encoder_Scan
+ .text.get_battery_percentage
+                0x000000000000170c       0xa4 ./adc/adc.o
+                0x000000000000170c                get_battery_percentage
+ .text.Battery_DeInit
+                0x00000000000017b0       0x40 ./adc/adc.o
+                0x00000000000017b0                Battery_DeInit
+ .text.DMA_Tx_Init
+                0x00000000000017f0       0x82 ./adc/adc.o
+                0x00000000000017f0                DMA_Tx_Init
+ .text.Battery_Init
+                0x0000000000001872       0xd2 ./adc/adc.o
+                0x0000000000001872                Battery_Init
+ .text.show_battery
+                0x0000000000001944      0x22e ./adc/adc.o
+                0x0000000000001944                show_battery
+ .text.TIM2_IRQHandler
+                0x0000000000001b72       0x4c ./User/ch32v00x_it.o
+                0x0000000000001b72                TIM2_IRQHandler
+ .text.refresh_SleepCounter
+                0x0000000000001bbe        0x6 ./User/ch32v00x_it.o
+                0x0000000000001bbe                refresh_SleepCounter
+ .text.DMA1_Channel3_IRQHandler
+                0x0000000000001bc4       0x1c ./User/ch32v00x_it.o
+                0x0000000000001bc4                DMA1_Channel3_IRQHandler
+ .text.DMA1_Channel1_IRQHandler
+                0x0000000000001be0       0x52 ./User/ch32v00x_it.o
+                0x0000000000001be0                DMA1_Channel1_IRQHandler
+ .text.NMI_Handler
+                0x0000000000001c32        0x2 ./User/ch32v00x_it.o
+                0x0000000000001c32                NMI_Handler
+ .text.HardFault_Handler
+                0x0000000000001c34        0x2 ./User/ch32v00x_it.o
+                0x0000000000001c34                HardFault_Handler
+ .text.EXTI_INT_INIT
+                0x0000000000001c36       0x96 ./User/ch32v00x_it.o
+                0x0000000000001c36                EXTI_INT_INIT
+ .text.system_wokeup
+                0x0000000000001ccc       0x64 ./User/ch32v00x_it.o
+                0x0000000000001ccc                system_wokeup
+ .text.EXTI7_0_IRQHandler
+                0x0000000000001d30       0xb0 ./User/ch32v00x_it.o
+                0x0000000000001d30                EXTI7_0_IRQHandler
+ .text.system_enter_sleep
+                0x0000000000001de0       0x34 ./User/ch32v00x_it.o
+                0x0000000000001de0                system_enter_sleep
+ .text.Sleep_Scan
+                0x0000000000001e14       0x1c ./User/ch32v00x_it.o
+                0x0000000000001e14                Sleep_Scan
+ .text.TIM1_UP_IRQHandler
+                0x0000000000001e30       0xa6 ./User/ch32v00x_it.o
+                0x0000000000001e30                TIM1_UP_IRQHandler
+ .text.AWU_IRQHandler
+                0x0000000000001ed6       0x16 ./User/ch32v00x_it.o
+                0x0000000000001ed6                AWU_IRQHandler
+ .text.process_motor_flags
+                0x0000000000001eec       0x60 ./User/ch32v00x_it.o
+                0x0000000000001eec                process_motor_flags
+ .text.startup.main
+                0x0000000000001f4c       0x8e ./User/main.o
+                0x0000000000001f4c                main
+ .text.SystemInit
+                0x0000000000001fda       0xe6 ./User/system_ch32v00x.o
+                0x0000000000001fda                SystemInit
+ .text.SystemCoreClockUpdate
+                0x00000000000020c0       0x6c ./User/system_ch32v00x.o
+                0x00000000000020c0                SystemCoreClockUpdate
+ .text.TIM1_Init
+                0x000000000000212c       0xae ./Time/time_app.o
+                0x000000000000212c                TIM1_Init
+ .text.TIM1_DeInit
+                0x00000000000021da       0x42 ./Time/time_app.o
+                0x00000000000021da                TIM1_DeInit
+ .text.TIM2_Init
+                0x000000000000221c       0x96 ./Time/time_app.o
+                0x000000000000221c                TIM2_Init
+ .text.TIM2_DeInit
+                0x00000000000022b2       0x42 ./Time/time_app.o
+                0x00000000000022b2                TIM2_DeInit
+ .text.IWDG_Feed_Init
+                0x00000000000022f4       0x28 ./Time/time_app.o
+                0x00000000000022f4                IWDG_Feed_Init
+ .text.AWU_Init
+                0x000000000000231c       0x1c ./Time/time_app.o
+                0x000000000000231c                AWU_Init
+ .text.vector_handler
+                0x0000000000002338        0x2 ./Startup/startup_ch32v00x.o
+                0x0000000000002338                TIM1_CC_IRQHandler
+                0x0000000000002338                SysTick_Handler
+                0x0000000000002338                PVD_IRQHandler
+                0x0000000000002338                SPI1_IRQHandler
+                0x0000000000002338                DMA1_Channel4_IRQHandler
+                0x0000000000002338                ADC1_IRQHandler
+                0x0000000000002338                DMA1_Channel7_IRQHandler
+                0x0000000000002338                I2C1_EV_IRQHandler
+                0x0000000000002338                DMA1_Channel6_IRQHandler
+                0x0000000000002338                RCC_IRQHandler
+                0x0000000000002338                TIM1_TRG_COM_IRQHandler
+                0x0000000000002338                DMA1_Channel5_IRQHandler
+                0x0000000000002338                WWDG_IRQHandler
+                0x0000000000002338                SW_Handler
+                0x0000000000002338                TIM1_BRK_IRQHandler
+                0x0000000000002338                DMA1_Channel2_IRQHandler
+                0x0000000000002338                FLASH_IRQHandler
+                0x0000000000002338                USART1_IRQHandler
+                0x0000000000002338                I2C1_ER_IRQHandler
+ .text.handle_reset
+                0x000000000000233a       0x88 ./Startup/startup_ch32v00x.o
+                0x000000000000233a                handle_reset
+ .text.ADC_DeInit
+                0x00000000000023c2       0x26 ./Peripheral/src/ch32v00x_adc.o
+                0x00000000000023c2                ADC_DeInit
+ .text.ADC_Init
+                0x00000000000023e8       0x4e ./Peripheral/src/ch32v00x_adc.o
+                0x00000000000023e8                ADC_Init
+ .text.ADC_Cmd  0x0000000000002436       0x10 ./Peripheral/src/ch32v00x_adc.o
+                0x0000000000002436                ADC_Cmd
+ .text.ADC_DMACmd
+                0x0000000000002446       0x12 ./Peripheral/src/ch32v00x_adc.o
+                0x0000000000002446                ADC_DMACmd
+ .text.ADC_ResetCalibration
+                0x0000000000002458        0xa ./Peripheral/src/ch32v00x_adc.o
+                0x0000000000002458                ADC_ResetCalibration
+ .text.ADC_GetResetCalibrationStatus
+                0x0000000000002462        0x8 ./Peripheral/src/ch32v00x_adc.o
+                0x0000000000002462                ADC_GetResetCalibrationStatus
+ .text.ADC_StartCalibration
+                0x000000000000246a        0xa ./Peripheral/src/ch32v00x_adc.o
+                0x000000000000246a                ADC_StartCalibration
+ .text.ADC_GetCalibrationStatus
+                0x0000000000002474        0x8 ./Peripheral/src/ch32v00x_adc.o
+                0x0000000000002474                ADC_GetCalibrationStatus
+ .text.ADC_SoftwareStartConvCmd
+                0x000000000000247c       0x18 ./Peripheral/src/ch32v00x_adc.o
+                0x000000000000247c                ADC_SoftwareStartConvCmd
+ .text.ADC_RegularChannelConfig
+                0x0000000000002494       0xba ./Peripheral/src/ch32v00x_adc.o
+                0x0000000000002494                ADC_RegularChannelConfig
+ .text.ADC_Calibration_Vol
+                0x000000000000254e       0x14 ./Peripheral/src/ch32v00x_adc.o
+                0x000000000000254e                ADC_Calibration_Vol
+ .text.DMA_DeInit
+                0x0000000000002562       0x92 ./Peripheral/src/ch32v00x_dma.o
+                0x0000000000002562                DMA_DeInit
+ .text.DMA_Init
+                0x00000000000025f4       0x38 ./Peripheral/src/ch32v00x_dma.o
+                0x00000000000025f4                DMA_Init
+ .text.DMA_Cmd  0x000000000000262c       0x14 ./Peripheral/src/ch32v00x_dma.o
+                0x000000000000262c                DMA_Cmd
+ .text.DMA_ITConfig
+                0x0000000000002640       0x12 ./Peripheral/src/ch32v00x_dma.o
+                0x0000000000002640                DMA_ITConfig
+ .text.DMA_GetFlagStatus
+                0x0000000000002652        0xe ./Peripheral/src/ch32v00x_dma.o
+                0x0000000000002652                DMA_GetFlagStatus
+ .text.DMA_ClearFlag
+                0x0000000000002660        0x8 ./Peripheral/src/ch32v00x_dma.o
+                0x0000000000002660                DMA_ClearFlag
+ .text.DMA_GetITStatus
+                0x0000000000002668        0xc ./Peripheral/src/ch32v00x_dma.o
+                0x0000000000002668                DMA_GetITStatus
+ .text.DMA_ClearITPendingBit
+                0x0000000000002674        0x8 ./Peripheral/src/ch32v00x_dma.o
+                0x0000000000002674                DMA_ClearITPendingBit
+ .text.EXTI_Init
+                0x000000000000267c       0x6a ./Peripheral/src/ch32v00x_exti.o
+                0x000000000000267c                EXTI_Init
+ .text.EXTI_GetITStatus
+                0x00000000000026e6       0x1e ./Peripheral/src/ch32v00x_exti.o
+                0x00000000000026e6                EXTI_GetITStatus
+ .text.EXTI_ClearITPendingBit
+                0x0000000000002704        0xa ./Peripheral/src/ch32v00x_exti.o
+                0x0000000000002704                EXTI_ClearITPendingBit
+ .text.GPIO_Init
+                0x000000000000270e       0x7c ./Peripheral/src/ch32v00x_gpio.o
+                0x000000000000270e                GPIO_Init
+ .text.GPIO_ReadInputDataBit
+                0x000000000000278a        0xa ./Peripheral/src/ch32v00x_gpio.o
+                0x000000000000278a                GPIO_ReadInputDataBit
+ .text.GPIO_ReadOutputDataBit
+                0x0000000000002794        0xa ./Peripheral/src/ch32v00x_gpio.o
+                0x0000000000002794                GPIO_ReadOutputDataBit
+ .text.GPIO_SetBits
+                0x000000000000279e        0x4 ./Peripheral/src/ch32v00x_gpio.o
+                0x000000000000279e                GPIO_SetBits
+ .text.GPIO_ResetBits
+                0x00000000000027a2        0x4 ./Peripheral/src/ch32v00x_gpio.o
+                0x00000000000027a2                GPIO_ResetBits
+ .text.GPIO_EXTILineConfig
+                0x00000000000027a6       0x22 ./Peripheral/src/ch32v00x_gpio.o
+                0x00000000000027a6                GPIO_EXTILineConfig
+ .text.IWDG_WriteAccessCmd
+                0x00000000000027c8        0x8 ./Peripheral/src/ch32v00x_iwdg.o
+                0x00000000000027c8                IWDG_WriteAccessCmd
+ .text.IWDG_SetPrescaler
+                0x00000000000027d0        0x8 ./Peripheral/src/ch32v00x_iwdg.o
+                0x00000000000027d0                IWDG_SetPrescaler
+ .text.IWDG_SetReload
+                0x00000000000027d8        0x8 ./Peripheral/src/ch32v00x_iwdg.o
+                0x00000000000027d8                IWDG_SetReload
+ .text.IWDG_ReloadCounter
+                0x00000000000027e0        0xe ./Peripheral/src/ch32v00x_iwdg.o
+                0x00000000000027e0                IWDG_ReloadCounter
+ .text.IWDG_Enable
+                0x00000000000027ee       0x18 ./Peripheral/src/ch32v00x_iwdg.o
+                0x00000000000027ee                IWDG_Enable
+ .text.NVIC_PriorityGroupConfig
+                0x0000000000002806        0x6 ./Peripheral/src/ch32v00x_misc.o
+                0x0000000000002806                NVIC_PriorityGroupConfig
+ .text.NVIC_Init
+                0x000000000000280c       0x54 ./Peripheral/src/ch32v00x_misc.o
+                0x000000000000280c                NVIC_Init
+ .text.PWR_AutoWakeUpCmd
+                0x0000000000002860       0x14 ./Peripheral/src/ch32v00x_pwr.o
+                0x0000000000002860                PWR_AutoWakeUpCmd
+ .text.PWR_AWU_SetPrescaler
+                0x0000000000002874        0xe ./Peripheral/src/ch32v00x_pwr.o
+                0x0000000000002874                PWR_AWU_SetPrescaler
+ .text.PWR_AWU_SetWindowValue
+                0x0000000000002882       0x1e ./Peripheral/src/ch32v00x_pwr.o
+                0x0000000000002882                PWR_AWU_SetWindowValue
+ .text.PWR_EnterSTANDBYMode
+                0x00000000000028a0       0x82 ./Peripheral/src/ch32v00x_pwr.o
+                0x00000000000028a0                PWR_EnterSTANDBYMode
+ .text.RCC_AdjustHSICalibrationValue
+                0x0000000000002922       0x12 ./Peripheral/src/ch32v00x_rcc.o
+                0x0000000000002922                RCC_AdjustHSICalibrationValue
+ .text.RCC_ADCCLKConfig
+                0x0000000000002934       0x14 ./Peripheral/src/ch32v00x_rcc.o
+                0x0000000000002934                RCC_ADCCLKConfig
+ .text.RCC_GetClocksFreq
+                0x0000000000002948       0xa2 ./Peripheral/src/ch32v00x_rcc.o
+                0x0000000000002948                RCC_GetClocksFreq
+ .text.RCC_AHBPeriphClockCmd
+                0x00000000000029ea       0x1e ./Peripheral/src/ch32v00x_rcc.o
+                0x00000000000029ea                RCC_AHBPeriphClockCmd
+ .text.RCC_APB2PeriphClockCmd
+                0x0000000000002a08       0x1e ./Peripheral/src/ch32v00x_rcc.o
+                0x0000000000002a08                RCC_APB2PeriphClockCmd
+ .text.RCC_APB1PeriphClockCmd
+                0x0000000000002a26       0x1e ./Peripheral/src/ch32v00x_rcc.o
+                0x0000000000002a26                RCC_APB1PeriphClockCmd
+ .text.RCC_APB2PeriphResetCmd
+                0x0000000000002a44       0x1e ./Peripheral/src/ch32v00x_rcc.o
+                0x0000000000002a44                RCC_APB2PeriphResetCmd
+ .text.RCC_APB1PeriphResetCmd
+                0x0000000000002a62       0x1e ./Peripheral/src/ch32v00x_rcc.o
+                0x0000000000002a62                RCC_APB1PeriphResetCmd
+ .text.RCC_GetFlagStatus
+                0x0000000000002a80       0x20 ./Peripheral/src/ch32v00x_rcc.o
+                0x0000000000002a80                RCC_GetFlagStatus
+ .text.SPI_Init
+                0x0000000000002aa0       0x32 ./Peripheral/src/ch32v00x_spi.o
+                0x0000000000002aa0                SPI_Init
+ .text.SPI_Cmd  0x0000000000002ad2       0x1a ./Peripheral/src/ch32v00x_spi.o
+                0x0000000000002ad2                SPI_Cmd
+ .text.SPI_I2S_DMACmd
+                0x0000000000002aec       0x12 ./Peripheral/src/ch32v00x_spi.o
+                0x0000000000002aec                SPI_I2S_DMACmd
+ .text.SPI_I2S_SendData
+                0x0000000000002afe        0x4 ./Peripheral/src/ch32v00x_spi.o
+                0x0000000000002afe                SPI_I2S_SendData
+ .text.SPI_I2S_ReceiveData
+                0x0000000000002b02        0x4 ./Peripheral/src/ch32v00x_spi.o
+                0x0000000000002b02                SPI_I2S_ReceiveData
+ .text.SPI_I2S_GetFlagStatus
+                0x0000000000002b06        0xa ./Peripheral/src/ch32v00x_spi.o
+                0x0000000000002b06                SPI_I2S_GetFlagStatus
+ .text.TI1_Config
+                0x0000000000002b10       0x5a ./Peripheral/src/ch32v00x_tim.o
+ .text.TI2_Config
+                0x0000000000002b6a       0x70 ./Peripheral/src/ch32v00x_tim.o
+ .text.TIM_TimeBaseInit
+                0x0000000000002bda       0x4e ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002bda                TIM_TimeBaseInit
+ .text.TIM_OC3Init
+                0x0000000000002c28       0x94 ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002c28                TIM_OC3Init
+ .text.TIM_TimeBaseStructInit
+                0x0000000000002cbc       0x16 ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002cbc                TIM_TimeBaseStructInit
+ .text.TIM_Cmd  0x0000000000002cd2       0x18 ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002cd2                TIM_Cmd
+ .text.TIM_CtrlPWMOutputs
+                0x0000000000002cea       0x16 ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002cea                TIM_CtrlPWMOutputs
+ .text.TIM_ITConfig
+                0x0000000000002d00       0x12 ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002d00                TIM_ITConfig
+ .text.TIM_EncoderInterfaceConfig
+                0x0000000000002d12       0x3c ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002d12                TIM_EncoderInterfaceConfig
+ .text.TIM_ARRPreloadConfig
+                0x0000000000002d4e       0x1a ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002d4e                TIM_ARRPreloadConfig
+ .text.TIM_OC3PreloadConfig
+                0x0000000000002d68        0xe ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002d68                TIM_OC3PreloadConfig
+ .text.TIM_SetCounter
+                0x0000000000002d76        0x4 ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002d76                TIM_SetCounter
+ .text.TIM_SetIC1Prescaler
+                0x0000000000002d7a       0x16 ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002d7a                TIM_SetIC1Prescaler
+ .text.TIM_SetIC2Prescaler
+                0x0000000000002d90       0x1a ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002d90                TIM_SetIC2Prescaler
+ .text.TIM_ICInit
+                0x0000000000002daa       0x3c ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002daa                TIM_ICInit
+ .text.TIM_ClearFlag
+                0x0000000000002de6        0xc ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002de6                TIM_ClearFlag
+ .text.TIM_GetITStatus
+                0x0000000000002df2       0x18 ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002df2                TIM_GetITStatus
+ .text.TIM_ClearITPendingBit
+                0x0000000000002e0a        0xc ./Peripheral/src/ch32v00x_tim.o
+                0x0000000000002e0a                TIM_ClearITPendingBit
+ .text.USART_DeInit
+                0x0000000000002e16       0x26 ./Peripheral/src/ch32v00x_usart.o
+                0x0000000000002e16                USART_DeInit
+ .text.USART_Init
+                0x0000000000002e3c       0xce ./Peripheral/src/ch32v00x_usart.o
+                0x0000000000002e3c                USART_Init
+ .text.USART_Cmd
+                0x0000000000002f0a       0x16 ./Peripheral/src/ch32v00x_usart.o
+                0x0000000000002f0a                USART_Cmd
+ .text.SX1278_SPI_RW
+                0x0000000000002f20       0x5c ./Lora/SX1278.o
+                0x0000000000002f20                SX1278_SPI_RW
+ .text.SX1278_Read_Reg
+                0x0000000000002f7c       0x3e ./Lora/SX1278.o
+                0x0000000000002f7c                SX1278_Read_Reg
+ .text.SX1278_Write_Reg
+                0x0000000000002fba       0x42 ./Lora/SX1278.o
+                0x0000000000002fba                SX1278_Write_Reg
+ .text.SX1278_Burst_Read
+                0x0000000000002ffc       0x5e ./Lora/SX1278.o
+                0x0000000000002ffc                SX1278_Burst_Read
+ .text.SX1278_Burst_Write
+                0x000000000000305a       0x56 ./Lora/SX1278.o
+                0x000000000000305a                SX1278_Burst_Write
+ .text.SX1278_Standby
+                0x00000000000030b0       0x10 ./Lora/SX1278.o
+                0x00000000000030b0                SX1278_Standby
+ .text.SX1278_Sleep
+                0x00000000000030c0       0x10 ./Lora/SX1278.o
+                0x00000000000030c0                SX1278_Sleep
+ .text.SX1278_EntryLoRa
+                0x00000000000030d0       0x12 ./Lora/SX1278.o
+                0x00000000000030d0                SX1278_EntryLoRa
+ .text.SX1278_LoRaClearIrq
+                0x00000000000030e2       0x12 ./Lora/SX1278.o
+                0x00000000000030e2                SX1278_LoRaClearIrq
+ .text.SX1278_Config
+                0x00000000000030f4       0xaa ./Lora/SX1278.o
+                0x00000000000030f4                SX1278_Config
+ .text.SX1278_LoRaEntryRx
+                0x000000000000319e       0x6a ./Lora/SX1278.o
+                0x000000000000319e                SX1278_LoRaEntryRx
+ .text.SX1278_LoRaEntryTx
+                0x0000000000003208       0x6e ./Lora/SX1278.o
+                0x0000000000003208                SX1278_LoRaEntryTx
+ .text.SX1278_LoRaTxPacket
+                0x0000000000003276       0x7e ./Lora/SX1278.o
+                0x0000000000003276                SX1278_LoRaTxPacket
+ .text.SX1278_LoRaRxPacket
+                0x00000000000032f4      0x100 ./Lora/SX1278.o
+                0x00000000000032f4                SX1278_LoRaRxPacket
+ .text.SX1278_Receive
+                0x00000000000033f4       0x4c ./Lora/SX1278.o
+                0x00000000000033f4                SX1278_Receive
+ .text.SX1278_Init
+                0x0000000000003440       0x3e ./Lora/SX1278.o
+                0x0000000000003440                SX1278_Init
+ .text.GPIO_Init_Pin
+                0x000000000000347e       0x1e ./Gpio/gpio.o
+                0x000000000000347e                GPIO_Init_Pin
+ .text.My_GPIO_Init
+                0x000000000000349c       0xea ./Gpio/gpio.o
+                0x000000000000349c                My_GPIO_Init
+ .text.MOTOR_SET
+                0x0000000000003586       0x32 ./Gpio/gpio.o
+                0x0000000000003586                MOTOR_SET
+ .text.Delay_Init
+                0x00000000000035b8       0x34 ./Debug/debug.o
+                0x00000000000035b8                Delay_Init
+ .text.Delay_Ms
+                0x00000000000035ec       0x3a ./Debug/debug.o
+                0x00000000000035ec                Delay_Ms
+ .text.USART_Printf_Init
+                0x0000000000003626       0x5c ./Debug/debug.o
+                0x0000000000003626                USART_Printf_Init
+ .text.intToStr
+                0x0000000000003682       0xac ./Debug/debug.o
+                0x0000000000003682                intToStr
+ .text.memcpy   0x000000000000372e       0xd2 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcpy.o)
+                0x000000000000372e                memcpy
+ .text.strlen   0x0000000000003800       0x12 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strlen.o)
+                0x0000000000003800                strlen
+ *(.rodata)
+ *(.rodata*)
+ *fill*         0x0000000000003812        0x2 
+ .rodata.Font12_English
+                0x0000000000003814      0x144 ./screen/font12.o
+                0x0000000000003814                Font12_English
+ .rodata.Font16_Button
+                0x0000000000003958       0x40 ./screen/font16.o
+                0x0000000000003958                Font16_Button
+ .rodata.Font16_Cycle
+                0x0000000000003998       0x16 ./screen/font16.o
+                0x0000000000003998                Font16_Cycle
+ *fill*         0x00000000000039ae        0x2 
+ .rodata.Font16_Number
+                0x00000000000039b0      0x1a0 ./screen/font16.o
+                0x00000000000039b0                Font16_Number
+ .rodata.Font16_Setting
+                0x0000000000003b50       0x40 ./screen/font16.o
+                0x0000000000003b50                Font16_Setting
+ .rodata.Font16_battery
+                0x0000000000003b90       0x42 ./screen/font16.o
+                0x0000000000003b90                Font16_battery
+ *fill*         0x0000000000003bd2        0x2 
+ .rodata.Font16_english
+                0x0000000000003bd4      0x200 ./screen/font16.o
+                0x0000000000003bd4                Font16_english
+ .rodata.Font16_english_map
+                0x0000000000003dd4       0x10 ./screen/font16.o
+                0x0000000000003dd4                Font16_english_map
+ .rodata.Font16_operate
+                0x0000000000003de4       0x1e ./screen/font16.o
+                0x0000000000003de4                Font16_operate
+ *fill*         0x0000000000003e02        0x2 
+ .rodata.update_current_setting
+                0x0000000000003e04       0x18 ./screen/page.o
+ .rodata.draw_setting.str1.4
+                0x0000000000003e1c        0x2 ./screen/page.o
+ *fill*         0x0000000000003e1e        0x2 
+ .rodata.info_page.str1.4
+                0x0000000000003e20       0x1e ./screen/page.o
+ *fill*         0x0000000000003e3e        0x2 
+ .rodata.setting_page.str1.4
+                0x0000000000003e40        0x3 ./screen/page.o
+ *fill*         0x0000000000003e43        0x1 
+ .rodata.str1.4
+                0x0000000000003e44       0x27 ./screen/page.o
+ *fill*         0x0000000000003e6b        0x1 
+ .rodata.init_cmds
+                0x0000000000003e6c       0x41 ./screen/screen_api.o
+ *fill*         0x0000000000003ead        0x3 
+ .rodata.percent_points
+                0x0000000000003eb0        0x5 ./adc/adc.o
+                0x0000000000003eb0                percent_points
+ *fill*         0x0000000000003eb5        0x3 
+ .rodata.show_battery.str1.4
+                0x0000000000003eb8        0x6 ./adc/adc.o
+ *fill*         0x0000000000003ebe        0x2 
+ .rodata.SX1278_LoRaRxPacket.str1.4
+                0x0000000000003ec0        0x4 ./Lora/SX1278.o
+                                          0x2 (size before relaxing)
+ .rodata.sx1276_7_8FreqTbl
+                0x0000000000003ec4       0x24 ./Lora/SX1278.o
+                0x0000000000003ec4                sx1276_7_8FreqTbl
+ *(.gnu.linkonce.t.*)
+                0x0000000000003ee8                . = ALIGN (0x4)
+
+.rela.dyn       0x0000000000003ee8        0x0
+ .rela.init     0x0000000000003ee8        0x0 ./screen/GUI_Paint.o
+ .rela.text.handle_reset
+                0x0000000000003ee8        0x0 ./screen/GUI_Paint.o
+
+.fini           0x0000000000003ee8        0x0
+ *(SORT_NONE(.fini))
+                0x0000000000003ee8                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_etext = .)
+                [!provide]                        PROVIDE (_eitcm = .)
+
+.preinit_array  0x0000000000003ee8        0x0
+                [!provide]                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = .)
+
+.init_array     0x0000000000003ee8        0x0
+                [!provide]                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+                [!provide]                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x0000000000003ee8        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+
+.dalign         0x0000000020000000        0x0 load address 0x0000000000003ee8
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                PROVIDE (_data_vma = .)
+
+.dlalign        0x0000000000003ee8        0x0
+                0x0000000000003ee8                . = ALIGN (0x4)
+                0x0000000000003ee8                PROVIDE (_data_lma = .)
+
+.data           0x0000000020000000       0xe8 load address 0x0000000000003ee8
+                0x0000000020000000                . = ALIGN (0x4)
+ *(.gnu.linkonce.r.*)
+ *(.data .data.*)
+ .data.Font12_En
+                0x0000000020000000        0x8 ./screen/font12.o
+                0x0000000020000000                Font12_En
+ .data.Fontline
+                0x0000000020000008        0x8 ./screen/font12.o
+                0x0000000020000008                Fontline
+ .data.Font16_Bat
+                0x0000000020000010        0x8 ./screen/font16.o
+                0x0000000020000010                Font16_Bat
+ .data.Font16_En
+                0x0000000020000018        0x8 ./screen/font16.o
+                0x0000000020000018                Font16_En
+ .data.Font16_Num
+                0x0000000020000020        0x8 ./screen/font16.o
+                0x0000000020000020                Font16_Num
+ .data.Font16_Operate
+                0x0000000020000028        0x8 ./screen/font16.o
+                0x0000000020000028                Font16_Operate
+ .data.Font16_button
+                0x0000000020000030        0x8 ./screen/font16.o
+                0x0000000020000030                Font16_button
+ .data.Font16_cycle
+                0x0000000020000038        0x8 ./screen/font16.o
+                0x0000000020000038                Font16_cycle
+ .data.Font16_setting
+                0x0000000020000040        0x8 ./screen/font16.o
+                0x0000000020000040                Font16_setting
+ .data.isFirstBattaryShow
+                0x0000000020000048        0x1 ./screen/page.o
+                0x0000000020000048                isFirstBattaryShow
+ .data.isFirstSettingShow
+                0x0000000020000049        0x1 ./screen/page.o
+                0x0000000020000049                isFirstSettingShow
+ .data.refreshState
+                0x000000002000004a        0x1 ./screen/page.o
+                0x000000002000004a                refreshState
+ *fill*         0x000000002000004b        0x1 
+ .data.settings
+                0x000000002000004c       0x48 ./screen/page.o
+                0x000000002000004c                settings
+ .data.Prepercentage.4881
+                0x0000000020000094        0x1 ./adc/adc.o
+ *fill*         0x0000000020000095        0x3 
+ .data.key      0x0000000020000098       0x10 ./User/ch32v00x_it.o
+                0x0000000020000098                key
+ .data.AHBPrescTable
+                0x00000000200000a8       0x10 ./User/system_ch32v00x.o
+                0x00000000200000a8                AHBPrescTable
+ .data.SystemCoreClock
+                0x00000000200000b8        0x4 ./User/system_ch32v00x.o
+                0x00000000200000b8                SystemCoreClock
+ .data.ADCPrescTable
+                0x00000000200000bc       0x14 ./Peripheral/src/ch32v00x_rcc.o
+ .data.APBAHBPrescTable
+                0x00000000200000d0       0x10 ./Peripheral/src/ch32v00x_rcc.o
+ .data.Lora_BandWide
+                0x00000000200000e0        0x1 ./Lora/SX1278.o
+                0x00000000200000e0                Lora_BandWide
+ .data.Lora_ErrorCoding
+                0x00000000200000e1        0x1 ./Lora/SX1278.o
+                0x00000000200000e1                Lora_ErrorCoding
+ .data.Lora_Freq
+                0x00000000200000e2        0x1 ./Lora/SX1278.o
+                0x00000000200000e2                Lora_Freq
+ .data.Lora_Power
+                0x00000000200000e3        0x1 ./Lora/SX1278.o
+                0x00000000200000e3                Lora_Power
+ .data.Lora_SpreadFactor
+                0x00000000200000e4        0x1 ./Lora/SX1278.o
+                0x00000000200000e4                Lora_SpreadFactor
+ .data.lora_receive_len
+                0x00000000200000e5        0x1 ./Lora/SX1278.o
+                0x00000000200000e5                lora_receive_len
+ .data.shake_mode
+                0x00000000200000e6        0x1 ./Gpio/gpio.o
+                0x00000000200000e6                shake_mode
+ *(.gnu.linkonce.d.*)
+                0x00000000200000e8                . = ALIGN (0x8)
+ *fill*         0x00000000200000e7        0x1 
+                0x00000000200008e8                PROVIDE (__global_pointer$ = (. + 0x800))
+ *(.sdata .sdata.*)
+ *(.sdata2*)
+ *(.gnu.linkonce.s.*)
+                0x00000000200000e8                . = ALIGN (0x8)
+ *(.srodata.cst16)
+ *(.srodata.cst8)
+ *(.srodata.cst4)
+ *(.srodata.cst2)
+ *(.srodata .srodata.*)
+                0x00000000200000e8                . = ALIGN (0x4)
+                0x00000000200000e8                PROVIDE (_edata = .)
+
+.bss            0x00000000200000e8      0x5a4 load address 0x0000000000003fd0
+                0x00000000200000e8                . = ALIGN (0x4)
+                0x00000000200000e8                PROVIDE (_sbss = .)
+ *(.sbss*)
+ *(.gnu.linkonce.sb.*)
+ *(.bss*)
+ .bss.Paint     0x00000000200000e8       0x18 ./screen/GUI_Paint.o
+                0x00000000200000e8                Paint
+ .bss.dmaFont   0x0000000020000100        0x4 ./screen/GUI_Paint.o
+                0x0000000020000100                dmaFont
+ .bss.dmaXpoint
+                0x0000000020000104        0x1 ./screen/GUI_Paint.o
+                0x0000000020000104                dmaXpoint
+ .bss.dmaYpoint
+                0x0000000020000105        0x1 ./screen/GUI_Paint.o
+                0x0000000020000105                dmaYpoint
+ .bss.Englishcount
+                0x0000000020000106        0x1 ./screen/page.o
+                0x0000000020000106                Englishcount
+ .bss.Englishposx
+                0x0000000020000107        0x1 ./screen/page.o
+                0x0000000020000107                Englishposx
+ .bss.Englishposy
+                0x0000000020000108        0x1 ./screen/page.o
+                0x0000000020000108                Englishposy
+ .bss.current_setting
+                0x0000000020000109        0x1 ./screen/page.o
+                0x0000000020000109                current_setting
+ *fill*         0x000000002000010a        0x2 
+ .bss.page      0x000000002000010c        0x4 ./screen/page.o
+                0x000000002000010c                page
+ .bss.send_wait_time
+                0x0000000020000110        0x1 ./screen/page.o
+                0x0000000020000110                send_wait_time
+ *fill*         0x0000000020000111        0x3 
+ .bss.LCD       0x0000000020000114        0x6 ./screen/screen_api.o
+                0x0000000020000114                LCD
+ .bss.dmaXoffset
+                0x000000002000011a        0x1 ./screen/screen_api.o
+                0x000000002000011a                dmaXoffset
+ .bss.dmaYoffset
+                0x000000002000011b        0x1 ./screen/screen_api.o
+                0x000000002000011b                dmaYoffset
+ .bss.lcd_gram  0x000000002000011c      0x480 ./screen/screen_api.o
+                0x000000002000011c                lcd_gram
+ .bss.precircle.4174
+                0x000000002000059c        0x4 ./encode/encode.o
+ .bss.precnt.4173
+                0x00000000200005a0        0x1 ./encode/encode.o
+ *fill*         0x00000000200005a1        0x3 
+ .bss.BattaryBuf
+                0x00000000200005a4       0x1e ./adc/adc.o
+                0x00000000200005a4                BattaryBuf
+ .bss.percentage.4880
+                0x00000000200005c2        0x1 ./adc/adc.o
+ *fill*         0x00000000200005c3        0x1 
+ .bss.Battery_ADC_Average
+                0x00000000200005c4        0x2 ./User/ch32v00x_it.o
+                0x00000000200005c4                Battery_ADC_Average
+ *fill*         0x00000000200005c6        0x2 
+ .bss.SleepCounter
+                0x00000000200005c8        0x4 ./User/ch32v00x_it.o
+                0x00000000200005c8                SleepCounter
+ .bss.charge    0x00000000200005cc        0x4 ./User/ch32v00x_it.o
+                0x00000000200005cc                charge
+ .bss.circle    0x00000000200005d0        0x4 ./User/ch32v00x_it.o
+                0x00000000200005d0                circle
+ .bss.dmaTransferComplete
+                0x00000000200005d4        0x1 ./User/ch32v00x_it.o
+                0x00000000200005d4                dmaTransferComplete
+ *fill*         0x00000000200005d5        0x3 
+ .bss.encode_struct
+                0x00000000200005d8        0x8 ./User/ch32v00x_it.o
+                0x00000000200005d8                encode_struct
+ .bss.loraComplete
+                0x00000000200005e0        0x1 ./User/ch32v00x_it.o
+                0x00000000200005e0                loraComplete
+ *fill*         0x00000000200005e1        0x1 
+ .bss.motor_shake_time
+                0x00000000200005e2        0x2 ./User/ch32v00x_it.o
+                0x00000000200005e2                motor_shake_time
+ .bss.motor_shaking
+                0x00000000200005e4        0x1 ./User/ch32v00x_it.o
+                0x00000000200005e4                motor_shaking
+ .bss.needDeinit
+                0x00000000200005e5        0x1 ./User/ch32v00x_it.o
+                0x00000000200005e5                needDeinit
+ .bss.needMotorShakeCharge
+                0x00000000200005e6        0x1 ./User/ch32v00x_it.o
+                0x00000000200005e6                needMotorShakeCharge
+ .bss.needMotorShakeEncode
+                0x00000000200005e7        0x1 ./User/ch32v00x_it.o
+                0x00000000200005e7                needMotorShakeEncode
+ .bss.needMotorShakeKey
+                0x00000000200005e8        0x1 ./User/ch32v00x_it.o
+                0x00000000200005e8                needMotorShakeKey
+ .bss.needMotorShakeLora
+                0x00000000200005e9        0x1 ./User/ch32v00x_it.o
+                0x00000000200005e9                needMotorShakeLora
+ .bss.needSleep
+                0x00000000200005ea        0x1 ./User/ch32v00x_it.o
+                0x00000000200005ea                needSleep
+ *fill*         0x00000000200005eb        0x1 
+ .bss.pre_Battery_ADC_Average
+                0x00000000200005ec        0x2 ./User/ch32v00x_it.o
+                0x00000000200005ec                pre_Battery_ADC_Average
+ *fill*         0x00000000200005ee        0x2 
+ .bss.NVIC_Priority_Group
+                0x00000000200005f0        0x4 ./Peripheral/src/ch32v00x_misc.o
+                0x00000000200005f0                NVIC_Priority_Group
+ .bss.lora_receive_buf
+                0x00000000200005f4       0x91 ./Lora/SX1278.o
+                0x00000000200005f4                lora_receive_buf
+ .bss.lora_receive_flag
+                0x0000000020000685        0x1 ./Lora/SX1278.o
+                0x0000000020000685                lora_receive_flag
+ .bss.p_ms      0x0000000020000686        0x2 ./Debug/debug.o
+ .bss.p_us      0x0000000020000688        0x1 ./Debug/debug.o
+ *(.gnu.linkonce.b.*)
+ *(COMMON*)
+                0x000000002000068c                . = ALIGN (0x4)
+ *fill*         0x0000000020000689        0x3 
+                0x000000002000068c                PROVIDE (_ebss = .)
+                0x000000002000068c                PROVIDE (_end = _ebss)
+                [!provide]                        PROVIDE (end = .)
+
+.stack          0x0000000020000700      0x100
+                0x0000000020000700                PROVIDE (_heap_end = .)
+                0x0000000020000700                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_susrstack = .)
+                0x0000000020000800                . = (. + __stack_size)
+ *fill*         0x0000000020000700      0x100 
+                0x0000000020000800                PROVIDE (_eusrstack = .)
+OUTPUT(newmsg.elf elf32-littleriscv)
+
+.debug_info     0x0000000000000000    0x1f2d5
+ .debug_info    0x0000000000000000     0x28cf ./screen/GUI_Paint.o
+ .debug_info    0x00000000000028cf     0x113d ./screen/drive_screen.o
+ .debug_info    0x0000000000003a0c      0x1e1 ./screen/font12.o
+ .debug_info    0x0000000000003bed      0x330 ./screen/font16.o
+ .debug_info    0x0000000000003f1d     0x1c6a ./screen/page.o
+ .debug_info    0x0000000000005b87     0x23f0 ./screen/screen_api.o
+ .debug_info    0x0000000000007f77      0xd00 ./encode/encode.o
+ .debug_info    0x0000000000008c77     0x19a8 ./adc/adc.o
+ .debug_info    0x000000000000a61f     0x1a4c ./User/ch32v00x_it.o
+ .debug_info    0x000000000000c06b     0x104b ./User/main.o
+ .debug_info    0x000000000000d0b6      0xc83 ./User/system_ch32v00x.o
+ .debug_info    0x000000000000dd39     0x1481 ./Time/time_app.o
+ .debug_info    0x000000000000f1ba       0x22 ./Startup/startup_ch32v00x.o
+ .debug_info    0x000000000000f1dc     0x1576 ./Peripheral/src/ch32v00x_adc.o
+ .debug_info    0x0000000000010752      0xd7f ./Peripheral/src/ch32v00x_dma.o
+ .debug_info    0x00000000000114d1      0xc85 ./Peripheral/src/ch32v00x_exti.o
+ .debug_info    0x0000000000012156     0x1084 ./Peripheral/src/ch32v00x_gpio.o
+ .debug_info    0x00000000000131da      0xb96 ./Peripheral/src/ch32v00x_iwdg.o
+ .debug_info    0x0000000000013d70      0xe32 ./Peripheral/src/ch32v00x_misc.o
+ .debug_info    0x0000000000014ba2      0xecf ./Peripheral/src/ch32v00x_pwr.o
+ .debug_info    0x0000000000015a71     0x10dc ./Peripheral/src/ch32v00x_rcc.o
+ .debug_info    0x0000000000016b4d     0x10b4 ./Peripheral/src/ch32v00x_spi.o
+ .debug_info    0x0000000000017c01     0x281d ./Peripheral/src/ch32v00x_tim.o
+ .debug_info    0x000000000001a41e     0x13a1 ./Peripheral/src/ch32v00x_usart.o
+ .debug_info    0x000000000001b7bf     0x1b1c ./Lora/SX1278.o
+ .debug_info    0x000000000001d2db      0xea0 ./Gpio/gpio.o
+ .debug_info    0x000000000001e17b     0x115a ./Debug/debug.o
+
+.debug_abbrev   0x0000000000000000     0x521a
+ .debug_abbrev  0x0000000000000000      0x437 ./screen/GUI_Paint.o
+ .debug_abbrev  0x0000000000000437      0x2df ./screen/drive_screen.o
+ .debug_abbrev  0x0000000000000716       0xc1 ./screen/font12.o
+ .debug_abbrev  0x00000000000007d7       0xca ./screen/font16.o
+ .debug_abbrev  0x00000000000008a1      0x427 ./screen/page.o
+ .debug_abbrev  0x0000000000000cc8      0x52b ./screen/screen_api.o
+ .debug_abbrev  0x00000000000011f3      0x285 ./encode/encode.o
+ .debug_abbrev  0x0000000000001478      0x3d8 ./adc/adc.o
+ .debug_abbrev  0x0000000000001850      0x3f5 ./User/ch32v00x_it.o
+ .debug_abbrev  0x0000000000001c45      0x24f ./User/main.o
+ .debug_abbrev  0x0000000000001e94      0x2e5 ./User/system_ch32v00x.o
+ .debug_abbrev  0x0000000000002179      0x2d4 ./Time/time_app.o
+ .debug_abbrev  0x000000000000244d       0x12 ./Startup/startup_ch32v00x.o
+ .debug_abbrev  0x000000000000245f      0x316 ./Peripheral/src/ch32v00x_adc.o
+ .debug_abbrev  0x0000000000002775      0x311 ./Peripheral/src/ch32v00x_dma.o
+ .debug_abbrev  0x0000000000002a86      0x2e9 ./Peripheral/src/ch32v00x_exti.o
+ .debug_abbrev  0x0000000000002d6f      0x318 ./Peripheral/src/ch32v00x_gpio.o
+ .debug_abbrev  0x0000000000003087      0x291 ./Peripheral/src/ch32v00x_iwdg.o
+ .debug_abbrev  0x0000000000003318      0x2f9 ./Peripheral/src/ch32v00x_misc.o
+ .debug_abbrev  0x0000000000003611      0x359 ./Peripheral/src/ch32v00x_pwr.o
+ .debug_abbrev  0x000000000000396a      0x398 ./Peripheral/src/ch32v00x_rcc.o
+ .debug_abbrev  0x0000000000003d02      0x312 ./Peripheral/src/ch32v00x_spi.o
+ .debug_abbrev  0x0000000000004014      0x3db ./Peripheral/src/ch32v00x_tim.o
+ .debug_abbrev  0x00000000000043ef      0x332 ./Peripheral/src/ch32v00x_usart.o
+ .debug_abbrev  0x0000000000004721      0x4b1 ./Lora/SX1278.o
+ .debug_abbrev  0x0000000000004bd2      0x29a ./Gpio/gpio.o
+ .debug_abbrev  0x0000000000004e6c      0x3ae ./Debug/debug.o
+
+.debug_loc      0x0000000000000000     0x7719
+ .debug_loc     0x0000000000000000     0x1dde ./screen/GUI_Paint.o
+ .debug_loc     0x0000000000001dde      0x129 ./screen/drive_screen.o
+ .debug_loc     0x0000000000001f07      0x433 ./screen/page.o
+ .debug_loc     0x000000000000233a      0x7fe ./screen/screen_api.o
+ .debug_loc     0x0000000000002b38       0x42 ./encode/encode.o
+ .debug_loc     0x0000000000002b7a      0x420 ./adc/adc.o
+ .debug_loc     0x0000000000002f9a       0x28 ./User/ch32v00x_it.o
+ .debug_loc     0x0000000000002fc2       0x83 ./User/system_ch32v00x.o
+ .debug_loc     0x0000000000003045       0xe7 ./Time/time_app.o
+ .debug_loc     0x000000000000312c      0x9fa ./Peripheral/src/ch32v00x_adc.o
+ .debug_loc     0x0000000000003b26      0x14a ./Peripheral/src/ch32v00x_dma.o
+ .debug_loc     0x0000000000003c70      0x181 ./Peripheral/src/ch32v00x_exti.o
+ .debug_loc     0x0000000000003df1      0x5e2 ./Peripheral/src/ch32v00x_gpio.o
+ .debug_loc     0x00000000000043d3       0x68 ./Peripheral/src/ch32v00x_iwdg.o
+ .debug_loc     0x000000000000443b       0x2d ./Peripheral/src/ch32v00x_misc.o
+ .debug_loc     0x0000000000004468      0x12a ./Peripheral/src/ch32v00x_pwr.o
+ .debug_loc     0x0000000000004592      0x5e3 ./Peripheral/src/ch32v00x_rcc.o
+ .debug_loc     0x0000000000004b75      0x429 ./Peripheral/src/ch32v00x_spi.o
+ .debug_loc     0x0000000000004f9e     0x16d4 ./Peripheral/src/ch32v00x_tim.o
+ .debug_loc     0x0000000000006672      0x735 ./Peripheral/src/ch32v00x_usart.o
+ .debug_loc     0x0000000000006da7      0x54e ./Lora/SX1278.o
+ .debug_loc     0x00000000000072f5       0xb4 ./Gpio/gpio.o
+ .debug_loc     0x00000000000073a9      0x370 ./Debug/debug.o
+
+.debug_aranges  0x0000000000000000      0xdf0
+ .debug_aranges
+                0x0000000000000000       0xa0 ./screen/GUI_Paint.o
+ .debug_aranges
+                0x00000000000000a0       0x38 ./screen/drive_screen.o
+ .debug_aranges
+                0x00000000000000d8       0x18 ./screen/font12.o
+ .debug_aranges
+                0x00000000000000f0       0x18 ./screen/font16.o
+ .debug_aranges
+                0x0000000000000108       0x90 ./screen/page.o
+ .debug_aranges
+                0x0000000000000198       0x98 ./screen/screen_api.o
+ .debug_aranges
+                0x0000000000000230       0x28 ./encode/encode.o
+ .debug_aranges
+                0x0000000000000258       0x48 ./adc/adc.o
+ .debug_aranges
+                0x00000000000002a0       0x88 ./User/ch32v00x_it.o
+ .debug_aranges
+                0x0000000000000328       0x20 ./User/main.o
+ .debug_aranges
+                0x0000000000000348       0x28 ./User/system_ch32v00x.o
+ .debug_aranges
+                0x0000000000000370       0x48 ./Time/time_app.o
+ .debug_aranges
+                0x00000000000003b8       0x30 ./Startup/startup_ch32v00x.o
+ .debug_aranges
+                0x00000000000003e8      0x138 ./Peripheral/src/ch32v00x_adc.o
+ .debug_aranges
+                0x0000000000000520       0x60 ./Peripheral/src/ch32v00x_dma.o
+ .debug_aranges
+                0x0000000000000580       0x50 ./Peripheral/src/ch32v00x_exti.o
+ .debug_aranges
+                0x00000000000005d0       0x98 ./Peripheral/src/ch32v00x_gpio.o
+ .debug_aranges
+                0x0000000000000668       0x48 ./Peripheral/src/ch32v00x_iwdg.o
+ .debug_aranges
+                0x00000000000006b0       0x28 ./Peripheral/src/ch32v00x_misc.o
+ .debug_aranges
+                0x00000000000006d8       0x58 ./Peripheral/src/ch32v00x_pwr.o
+ .debug_aranges
+                0x0000000000000730       0xe0 ./Peripheral/src/ch32v00x_rcc.o
+ .debug_aranges
+                0x0000000000000810       0xb8 ./Peripheral/src/ch32v00x_spi.o
+ .debug_aranges
+                0x00000000000008c8      0x2d8 ./Peripheral/src/ch32v00x_tim.o
+ .debug_aranges
+                0x0000000000000ba0      0x100 ./Peripheral/src/ch32v00x_usart.o
+ .debug_aranges
+                0x0000000000000ca0       0xb0 ./Lora/SX1278.o
+ .debug_aranges
+                0x0000000000000d50       0x38 ./Gpio/gpio.o
+ .debug_aranges
+                0x0000000000000d88       0x68 ./Debug/debug.o
+
+.debug_ranges   0x0000000000000000      0xf78
+ .debug_ranges  0x0000000000000000      0x158 ./screen/GUI_Paint.o
+ .debug_ranges  0x0000000000000158       0x28 ./screen/drive_screen.o
+ .debug_ranges  0x0000000000000180       0x80 ./screen/page.o
+ .debug_ranges  0x0000000000000200      0x168 ./screen/screen_api.o
+ .debug_ranges  0x0000000000000368       0x18 ./encode/encode.o
+ .debug_ranges  0x0000000000000380       0xc0 ./adc/adc.o
+ .debug_ranges  0x0000000000000440       0xb0 ./User/ch32v00x_it.o
+ .debug_ranges  0x00000000000004f0       0x10 ./User/main.o
+ .debug_ranges  0x0000000000000500       0x18 ./User/system_ch32v00x.o
+ .debug_ranges  0x0000000000000518       0x38 ./Time/time_app.o
+ .debug_ranges  0x0000000000000550       0x28 ./Startup/startup_ch32v00x.o
+ .debug_ranges  0x0000000000000578      0x128 ./Peripheral/src/ch32v00x_adc.o
+ .debug_ranges  0x00000000000006a0       0x50 ./Peripheral/src/ch32v00x_dma.o
+ .debug_ranges  0x00000000000006f0       0x40 ./Peripheral/src/ch32v00x_exti.o
+ .debug_ranges  0x0000000000000730       0x88 ./Peripheral/src/ch32v00x_gpio.o
+ .debug_ranges  0x00000000000007b8       0x38 ./Peripheral/src/ch32v00x_iwdg.o
+ .debug_ranges  0x00000000000007f0       0x48 ./Peripheral/src/ch32v00x_misc.o
+ .debug_ranges  0x0000000000000838       0x88 ./Peripheral/src/ch32v00x_pwr.o
+ .debug_ranges  0x00000000000008c0       0xd0 ./Peripheral/src/ch32v00x_rcc.o
+ .debug_ranges  0x0000000000000990       0xa8 ./Peripheral/src/ch32v00x_spi.o
+ .debug_ranges  0x0000000000000a38      0x2c8 ./Peripheral/src/ch32v00x_tim.o
+ .debug_ranges  0x0000000000000d00       0xf0 ./Peripheral/src/ch32v00x_usart.o
+ .debug_ranges  0x0000000000000df0       0xd0 ./Lora/SX1278.o
+ .debug_ranges  0x0000000000000ec0       0x28 ./Gpio/gpio.o
+ .debug_ranges  0x0000000000000ee8       0x90 ./Debug/debug.o
+
+.debug_line     0x0000000000000000    0x127d9
+ .debug_line    0x0000000000000000     0x1bc4 ./screen/GUI_Paint.o
+ .debug_line    0x0000000000001bc4      0x678 ./screen/drive_screen.o
+ .debug_line    0x000000000000223c      0x115 ./screen/font12.o
+ .debug_line    0x0000000000002351      0x115 ./screen/font16.o
+ .debug_line    0x0000000000002466     0x1389 ./screen/page.o
+ .debug_line    0x00000000000037ef     0x1068 ./screen/screen_api.o
+ .debug_line    0x0000000000004857      0x4aa ./encode/encode.o
+ .debug_line    0x0000000000004d01      0xb31 ./adc/adc.o
+ .debug_line    0x0000000000005832     0x102e ./User/ch32v00x_it.o
+ .debug_line    0x0000000000006860      0x545 ./User/main.o
+ .debug_line    0x0000000000006da5      0x5a5 ./User/system_ch32v00x.o
+ .debug_line    0x000000000000734a      0x71e ./Time/time_app.o
+ .debug_line    0x0000000000007a68      0x112 ./Startup/startup_ch32v00x.o
+ .debug_line    0x0000000000007b7a     0x141e ./Peripheral/src/ch32v00x_adc.o
+ .debug_line    0x0000000000008f98      0x779 ./Peripheral/src/ch32v00x_dma.o
+ .debug_line    0x0000000000009711      0x5b2 ./Peripheral/src/ch32v00x_exti.o
+ .debug_line    0x0000000000009cc3      0xbd9 ./Peripheral/src/ch32v00x_gpio.o
+ .debug_line    0x000000000000a89c      0x3d1 ./Peripheral/src/ch32v00x_iwdg.o
+ .debug_line    0x000000000000ac6d      0x3b9 ./Peripheral/src/ch32v00x_misc.o
+ .debug_line    0x000000000000b026      0x635 ./Peripheral/src/ch32v00x_pwr.o
+ .debug_line    0x000000000000b65b      0xde0 ./Peripheral/src/ch32v00x_rcc.o
+ .debug_line    0x000000000000c43b      0x9b3 ./Peripheral/src/ch32v00x_spi.o
+ .debug_line    0x000000000000cdee     0x2d4c ./Peripheral/src/ch32v00x_tim.o
+ .debug_line    0x000000000000fb3a      0xeea ./Peripheral/src/ch32v00x_usart.o
+ .debug_line    0x0000000000010a24      0xeb0 ./Lora/SX1278.o
+ .debug_line    0x00000000000118d4      0x428 ./Gpio/gpio.o
+ .debug_line    0x0000000000011cfc      0xadd ./Debug/debug.o
+
+.debug_str      0x0000000000000000     0x4192
+ .debug_str     0x0000000000000000      0xb8e ./screen/GUI_Paint.o
+                                        0xc7b (size before relaxing)
+ .debug_str     0x0000000000000b8e      0x588 ./screen/drive_screen.o
+                                        0xb8b (size before relaxing)
+ .debug_str     0x0000000000001116       0x58 ./screen/font12.o
+                                        0x255 (size before relaxing)
+ .debug_str     0x000000000000116e       0x8c ./screen/font16.o
+                                        0x2be (size before relaxing)
+ .debug_str     0x00000000000011fa      0x52b ./screen/page.o
+                                        0xe4f (size before relaxing)
+ .debug_str     0x0000000000001725      0x2a6 ./screen/screen_api.o
+                                        0xe4b (size before relaxing)
+ .debug_str     0x00000000000019cb       0x72 ./encode/encode.o
+                                        0x7bd (size before relaxing)
+ .debug_str     0x0000000000001a3d      0x2b5 ./adc/adc.o
+                                        0xea4 (size before relaxing)
+ .debug_str     0x0000000000001cf2      0x382 ./User/ch32v00x_it.o
+                                       0x103d (size before relaxing)
+ .debug_str     0x0000000000002074       0xa1 ./User/main.o
+                                        0xa2e (size before relaxing)
+ .debug_str     0x0000000000002115       0xea ./User/system_ch32v00x.o
+                                        0x71c (size before relaxing)
+ .debug_str     0x00000000000021ff      0x32d ./Time/time_app.o
+                                        0xcc2 (size before relaxing)
+ .debug_str     0x000000000000252c       0x2a ./Startup/startup_ch32v00x.o
+                                         0x4c (size before relaxing)
+ .debug_str     0x0000000000002556      0x37c ./Peripheral/src/ch32v00x_adc.o
+                                        0xb97 (size before relaxing)
+ .debug_str     0x00000000000028d2       0xc4 ./Peripheral/src/ch32v00x_dma.o
+                                        0x812 (size before relaxing)
+ .debug_str     0x0000000000002996       0xaf ./Peripheral/src/ch32v00x_exti.o
+                                        0x7c0 (size before relaxing)
+ .debug_str     0x0000000000002a45      0x28f ./Peripheral/src/ch32v00x_gpio.o
+                                        0x950 (size before relaxing)
+ .debug_str     0x0000000000002cd4       0x76 ./Peripheral/src/ch32v00x_iwdg.o
+                                        0x706 (size before relaxing)
+ .debug_str     0x0000000000002d4a       0x73 ./Peripheral/src/ch32v00x_misc.o
+                                        0x92c (size before relaxing)
+ .debug_str     0x0000000000002dbd       0xc2 ./Peripheral/src/ch32v00x_pwr.o
+                                        0x7ed (size before relaxing)
+ .debug_str     0x0000000000002e7f      0x279 ./Peripheral/src/ch32v00x_rcc.o
+                                        0x9be (size before relaxing)
+ .debug_str     0x00000000000030f8      0x18c ./Peripheral/src/ch32v00x_spi.o
+                                        0x946 (size before relaxing)
+ .debug_str     0x0000000000003284      0x864 ./Peripheral/src/ch32v00x_tim.o
+                                       0x1262 (size before relaxing)
+ .debug_str     0x0000000000003ae8      0x3e8 ./Peripheral/src/ch32v00x_usart.o
+                                        0xb0d (size before relaxing)
+ .debug_str     0x0000000000003ed0      0x175 ./Lora/SX1278.o
+                                        0x9b0 (size before relaxing)
+ .debug_str     0x0000000000004045       0x2c ./Gpio/gpio.o
+                                        0x7ce (size before relaxing)
+ .debug_str     0x0000000000004071      0x121 ./Debug/debug.o
+                                        0x9fd (size before relaxing)
+
+.comment        0x0000000000000000       0x33
+ .comment       0x0000000000000000       0x33 ./screen/GUI_Paint.o
+                                         0x34 (size before relaxing)
+ .comment       0x0000000000000033       0x34 ./screen/drive_screen.o
+ .comment       0x0000000000000033       0x34 ./screen/font12.o
+ .comment       0x0000000000000033       0x34 ./screen/font16.o
+ .comment       0x0000000000000033       0x34 ./screen/page.o
+ .comment       0x0000000000000033       0x34 ./screen/screen_api.o
+ .comment       0x0000000000000033       0x34 ./encode/encode.o
+ .comment       0x0000000000000033       0x34 ./adc/adc.o
+ .comment       0x0000000000000033       0x34 ./User/ch32v00x_it.o
+ .comment       0x0000000000000033       0x34 ./User/main.o
+ .comment       0x0000000000000033       0x34 ./User/system_ch32v00x.o
+ .comment       0x0000000000000033       0x34 ./Time/time_app.o
+ .comment       0x0000000000000033       0x34 ./Peripheral/src/ch32v00x_adc.o
+ .comment       0x0000000000000033       0x34 ./Peripheral/src/ch32v00x_dma.o
+ .comment       0x0000000000000033       0x34 ./Peripheral/src/ch32v00x_exti.o
+ .comment       0x0000000000000033       0x34 ./Peripheral/src/ch32v00x_gpio.o
+ .comment       0x0000000000000033       0x34 ./Peripheral/src/ch32v00x_iwdg.o
+ .comment       0x0000000000000033       0x34 ./Peripheral/src/ch32v00x_misc.o
+ .comment       0x0000000000000033       0x34 ./Peripheral/src/ch32v00x_pwr.o
+ .comment       0x0000000000000033       0x34 ./Peripheral/src/ch32v00x_rcc.o
+ .comment       0x0000000000000033       0x34 ./Peripheral/src/ch32v00x_spi.o
+ .comment       0x0000000000000033       0x34 ./Peripheral/src/ch32v00x_tim.o
+ .comment       0x0000000000000033       0x34 ./Peripheral/src/ch32v00x_usart.o
+ .comment       0x0000000000000033       0x34 ./Lora/SX1278.o
+ .comment       0x0000000000000033       0x34 ./Gpio/gpio.o
+ .comment       0x0000000000000033       0x34 ./Debug/debug.o
+
+.debug_frame    0x0000000000000000     0x2190
+ .debug_frame   0x0000000000000000      0x268 ./screen/GUI_Paint.o
+ .debug_frame   0x0000000000000268       0x8c ./screen/drive_screen.o
+ .debug_frame   0x00000000000002f4      0x21c ./screen/page.o
+ .debug_frame   0x0000000000000510      0x238 ./screen/screen_api.o
+ .debug_frame   0x0000000000000748       0x48 ./encode/encode.o
+ .debug_frame   0x0000000000000790       0xf0 ./adc/adc.o
+ .debug_frame   0x0000000000000880      0x16c ./User/ch32v00x_it.o
+ .debug_frame   0x00000000000009ec       0x28 ./User/main.o
+ .debug_frame   0x0000000000000a14       0x50 ./User/system_ch32v00x.o
+ .debug_frame   0x0000000000000a64       0xdc ./Time/time_app.o
+ .debug_frame   0x0000000000000b40      0x26c ./Peripheral/src/ch32v00x_adc.o
+ .debug_frame   0x0000000000000dac       0xcc ./Peripheral/src/ch32v00x_dma.o
+ .debug_frame   0x0000000000000e78       0x90 ./Peripheral/src/ch32v00x_exti.o
+ .debug_frame   0x0000000000000f08      0x154 ./Peripheral/src/ch32v00x_gpio.o
+ .debug_frame   0x000000000000105c       0x70 ./Peripheral/src/ch32v00x_iwdg.o
+ .debug_frame   0x00000000000010cc       0x30 ./Peripheral/src/ch32v00x_misc.o
+ .debug_frame   0x00000000000010fc       0xa4 ./Peripheral/src/ch32v00x_pwr.o
+ .debug_frame   0x00000000000011a0      0x1dc ./Peripheral/src/ch32v00x_rcc.o
+ .debug_frame   0x000000000000137c      0x15c ./Peripheral/src/ch32v00x_spi.o
+ .debug_frame   0x00000000000014d8      0x624 ./Peripheral/src/ch32v00x_tim.o
+ .debug_frame   0x0000000000001afc      0x204 ./Peripheral/src/ch32v00x_usart.o
+ .debug_frame   0x0000000000001d00      0x270 ./Lora/SX1278.o
+ .debug_frame   0x0000000000001f70       0x8c ./Gpio/gpio.o
+ .debug_frame   0x0000000000001ffc      0x13c ./Debug/debug.o
+ .debug_frame   0x0000000000002138       0x38 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-memcpy.o)
+ .debug_frame   0x0000000000002170       0x20 h:/mounriver/mounriver_studio/toolchain/risc-v embedded gcc/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32ecxw/ilp32e\libg_nano.a(lib_a-strlen.o)
