@@ -26,7 +26,6 @@ SUBDIRS := \
 Core \
 Debug \
 Gpio \
-Lora \
 Peripheral/src \
 Startup \
 Time \

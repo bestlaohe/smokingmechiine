@@ -17,7 +17,6 @@ RM := rm -rf
 -include Time/subdir.mk
 -include Startup/subdir.mk
 -include Peripheral/src/subdir.mk
--include Lora/subdir.mk
 -include Gpio/subdir.mk
 -include Debug/subdir.mk
 -include Core/subdir.mk
@@ -60,7 +59,7 @@ all: newmsg.elf secondary-outputs
 
 # 工具调用
 newmsg.elf: $(OBJS) $(USER_OBJS)
-	@	@	riscv-none-embed-gcc -march=rv32ecxw -mabi=ilp32e -msmall-data-limit=0 -msave-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused -Wuninitialized  -g -T "C:\Users\12630\Desktop\newmsg\代码\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"newmsg.map" --specs=nano.specs --specs=nosys.specs -o "newmsg.elf" $(OBJS) $(USER_OBJS) $(LIBS) -lprintf
+	@	@	riscv-none-embed-gcc -march=rv32ecxw -mabi=ilp32e -msmall-data-limit=0 -msave-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused -Wuninitialized  -g -T "C:\Users\12630\Desktop\SmokingMachine\代码\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"newmsg.map" --specs=nano.specs --specs=nosys.specs -o "newmsg.elf" $(OBJS) $(USER_OBJS) $(LIBS) -lprintf
 	@	@
 newmsg.hex: newmsg.elf
 	@	riscv-none-embed-objcopy -O ihex "newmsg.elf"  "newmsg.hex"
