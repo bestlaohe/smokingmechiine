@@ -112,7 +112,8 @@ u8 Screen_spi_write(uint8_t _dat)
     return (uint8_t)SPI_I2S_ReceiveData(SPI1);
 }
 
-void LCD_Drive_Init(void)
+// 这些函数已经在screen_api.c中定义，这里重命名以避免冲突
+void LCD_Drive_Init_Basic(void)
 {
     SPI_FullDuplex_Init();
 
@@ -125,7 +126,7 @@ void LCD_Drive_Init(void)
     delay_us(10000);
 }
 
-void LCD_Drive_DeInit(void)
+void LCD_Drive_DeInit_Basic(void)
 {
     LCD_RST_0; // 使能复位
     SPI_Cmd(SPI1, DISABLE);

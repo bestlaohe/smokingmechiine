@@ -7,6 +7,9 @@
 #include "page.h"
 #include <string.h>
 #include "seting.h"
+#include "encode.h"     // 添加编码器头文件引用
+#include "adc.h"        // 添加ADC头文件引用
+#include "ch32v00x_it.h" // 添加按键结构定义头文件
 
 #define CHAR_HEIGHT 18      // 单个字符高度
 #define Y_OFFSET 22         // 设置页面初始的y轴偏移
@@ -15,14 +18,6 @@ u8 current_setting = 0;     // 当前设置的行
 u8 refreshState = 1;        // 内容刷新标志位
 u8 isFirstSettingShow = 1;  // 设置刷新标志
 u8 isFirstBattaryShow = 1;  // 电池刷新标志
-
-// 设置项：屏幕亮度和风扇速度
-typedef enum {
-    SETTING_SCREEN_LIGHT = 0,  // 屏幕亮度
-    SETTING_FAN_SPEED = 1,     // 风扇速度
-    SETTING_LED_LIGHT = 2,     // 照明LED亮度
-    SETTING_COUNT = 3          // 设置总数
-} SettingIndex;
 
 // 风扇速度值
 u8 fan_speed = 50;  // 默认50%速度
@@ -178,6 +173,9 @@ void display_settings(sFONT *Font)
 // 处理设置页面的编码器和按键事件
 void handle_setting_event()
 {
+  extern Encode encode_struct;  // 引用encode.h中定义的编码器结构
+  extern Key key;               // 引用Key结构体，注意使用小写k
+
   if (encode_struct.state == ENCODE_EVENT_UP)
   { // 编码器向上滚动
     update_current_setting(*settings[current_setting].value + 5); // 每次增加5%
@@ -196,8 +194,8 @@ void handle_setting_event()
   }
 }
 
-// 显示电池信息
-void show_battery(int x, int y, UWORD back_color, UWORD front_color, u8 *isFirstBattaryShow)
+// 展示电池信息的内部函数，与adc.h中的函数区分开
+void display_battery(int x, int y, UWORD back_color, UWORD front_color, u8 *isFirstBattaryShow)
 {
 #if BATTERY_ENABLED
   if (*isFirstBattaryShow)
@@ -236,7 +234,9 @@ void setting_page(sFONT *Font)
 {
   // 显示电池信息
 #if BATTERY_ENABLED
-  show_battery(90, 2, MY_THEME_BACK_COLOR, MY_THEME_COMPONT_COLOR, &isFirstBattaryShow);
+  // 使用adc.c中的show_battery函数
+  static u8 needShowBattery = 1;
+  show_battery(90, 2, MY_THEME_BACK_COLOR, MY_THEME_COMPONT_COLOR, &needShowBattery);
 #endif
   
   // 显示设置项
@@ -252,6 +252,9 @@ void show_page()
   setting_page(&Font16_En);
 
   // 处理完事件后清除事件
+  extern Key key;  // 引用Key结构体，注意使用小写k
+  extern Encode encode_struct;  // 引用编码器结构
+  
   key.event = KEY_EVENT_NONE;
   encode_struct.state = ENCODE_EVENT_NONE;
 }

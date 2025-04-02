@@ -57,6 +57,8 @@ void update_current_setting(int value);
 void clamp_value(int *value, int min, int max);
 void FAN_SetSpeed(uint8_t percentage);
 void LED_SetLight(uint8_t percentage);
-void show_battery(int x, int y, UWORD back_color, UWORD front_color, u8 *isFirstBattaryShow);
+
+// 我们使用adc.h中的声明 - 这里仅注释，不重复声明
+// void show_battery(int x, int y, UWORD back_color, UWORD front_color, u8 *isFirstBattaryShow);
 
 #endif /* PAGE_H_ */
