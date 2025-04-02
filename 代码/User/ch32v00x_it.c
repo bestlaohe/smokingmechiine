@@ -23,22 +23,13 @@ void TIM2_IRQHandler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
 void AWU_IRQHandler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
 
 volatile u8 dmaTransferComplete = 0;
-volatile u8 loraComplete = 0;
 volatile u8 needSleep = 0;
 volatile u8 needDeinit = 0;
-
-u8 motor_shaking = 0;
-u16 motor_shake_time = 0;
 
 volatile int circle = 0;
 int SleepCounter = 0;
 
-// 添加标志位用于延时操作
-volatile u8 needMotorShakeKey = 0;
-volatile u8 needMotorShakeLora = 0;
-volatile u8 needMotorShakeCharge = 0;
-volatile u8 needMotorShakeEncode = 0;
-
+// 删除震动马达相关标志位
 Encode encode_struct = {ENCODE_EVENT_NONE, 0};
 Key key = {KEY_STATE_IDLE, KEY_EVENT_NONE, 0, 0, 1};
 Charge charge = {UNCHARGING};
@@ -121,8 +112,7 @@ void EXTI7_0_IRQHandler(void)
 {
   if (EXTI_GetITStatus(EXTI_Line2) != RESET)
   {
-
-    needMotorShakeKey = 1;
+    // 删除震动马达触发代码
 
     EXTI_ClearITPendingBit(EXTI_Line2); /* Clear Flag */
 
@@ -168,21 +158,9 @@ void EXTI7_0_IRQHandler(void)
     system_wokeup(); // 系统唤醒
   }
 
-  if (EXTI_GetITStatus(EXTI_Line6) != RESET)
-  {
-    EXTI_ClearITPendingBit(EXTI_Line6); /* Clear Flag */
-    loraComplete = 1;
-    DEBUG_PRINT("lora operate\r\n"); // 不管发送还是接收都会触发
-
-    needMotorShakeLora = 1;
-
-    system_wokeup(); // 系统唤醒
-  }
-
   if (EXTI_GetITStatus(EXTI_Line1) != RESET)
   {
-
-    needMotorShakeCharge = 1;
+    // 删除震动马达触发代码
 
     if (!CHARGE)
     {
@@ -280,47 +258,45 @@ void HardFault_Handler(void)
  */
 void EXTI_INT_INIT(void)
 {
+  GPIO_InitTypeDef GPIO_InitStructure = {0};
   EXTI_InitTypeDef EXTI_InitStructure = {0};
   NVIC_InitTypeDef NVIC_InitStructure = {0};
 
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO | RCC_APB2Periph_GPIOD | RCC_APB2Periph_GPIOC, ENABLE);
 
-  // GPIO_EXTILineConfig(GPIO_PortSourceGPIOD, GPIO_PinSource6|GPIO_PinSource2|GPIO_PinSource7);
+  // SW按键中断，按键上拉，低电平有效
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+  GPIO_Init(GPIOD, &GPIO_InitStructure);
 
-  GPIO_EXTILineConfig(GPIO_PortSourceGPIOC, GPIO_PinSource1);
-  GPIO_EXTILineConfig(GPIO_PortSourceGPIOD, GPIO_PinSource6);
-  GPIO_EXTILineConfig(GPIO_PortSourceGPIOD, GPIO_PinSource2);
+  // 计费检测，低电平为充电
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+  GPIO_Init(GPIOC, &GPIO_InitStructure);
 
-  EXTI_InitStructure.EXTI_Line = EXTI_Line2 | EXTI_Line1; // key和charge
+  // 配置中断线路0-7
+  /* EXTI line gpio config */
+  EXTI_InitStructure.EXTI_Line = EXTI_Line2;
   EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
   EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising_Falling;
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);
 
-  EXTI_InitStructure.EXTI_Line = EXTI_Line6; // lora
+  // 充电
+  EXTI_InitStructure.EXTI_Line = EXTI_Line1;
   EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
-  EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
+  EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising_Falling;
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);
 
-  EXTI_InitStructure.EXTI_Line = EXTI_Line9; // AWU
-  EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
-  EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
-  EXTI_InitStructure.EXTI_LineCmd = ENABLE;
-  EXTI_Init(&EXTI_InitStructure);
-
-  NVIC_InitStructure.NVIC_IRQChannel = AWU_IRQn;
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;
-  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-  NVIC_Init(&NVIC_InitStructure);
-
+  // 中断向量分配 外部中断0-7
   NVIC_InitStructure.NVIC_IRQChannel = EXTI7_0_IRQn;
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1; // 优先级可以按照需要调整
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-
   NVIC_Init(&NVIC_InitStructure);
+
+  DEBUG_PRINT("EXTI_INT_INIT\r\n");
 }
 
 void system_wokeup()
@@ -430,18 +406,7 @@ void TIM1_UP_IRQHandler(void)
         key.state = KEY_STATE_HOLD;
     }
 
-    if (motor_shaking)
-    {
-      motor_shake_time++;
-      if (motor_shake_time >= SHAKE_TIME) // 消抖
-      {
-
-        DEBUG_PRINT("endshake\r\n");
-        motor_shaking = 0;
-        motor_shake_time = 0;
-        MOTOR_SET(0);
-      }
-    }
+    // 删除震动马达定时处理代码
   }
 }
 
@@ -464,19 +429,4 @@ void AWU_IRQHandler(void)
   }
 }
 
-void process_motor_flags(void)
-{
-  // 只要有任何一个震动标志位被设置，就执行一次震动
-  if (needMotorShakeKey || needMotorShakeLora || needMotorShakeCharge || needMotorShakeEncode)
-  {
-    MOTOR_SET(1);
-
-    // 清除所有标志位
-    needMotorShakeKey = 0;
-    needMotorShakeLora = 0;
-    needMotorShakeCharge = 0;
-    needMotorShakeEncode = 0;
-    motor_shaking = 1;
-    motor_shake_time = 0;
-  }
-}
+// 删除 process_motor_flags 函数

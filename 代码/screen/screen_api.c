@@ -348,10 +348,6 @@ u8 Screen_Clear(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color)
 {
 
 #if USE_DMA
-    while (!READ_LORA_CS)
-    {
-        DEBUG_PRINT("wait lora cs 1!\r\n");
-    }
     int dma_circular = 0;
     u8 retry = 0;
     Screen_SetWindows(Xstart, Ystart, Xend + 0, Yend + 0);
@@ -483,11 +479,6 @@ u8 LCD_Refrsh_DMA(int pic_size)
 {
 
 #if USE_DMA
-    while (!READ_LORA_CS)
-    {
-        DEBUG_PRINT("wait lora cs 1!\r\n");
-    }
-
     // 将整个数据搬运一次到DMA
     LCD_DC_1;
     LCD_CS_ENABLE;

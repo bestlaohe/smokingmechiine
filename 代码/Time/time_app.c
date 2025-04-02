@@ -11,39 +11,63 @@
  *
  * @param   arr   定时器自动重装载寄存器 (ARR) 的值，决定 PWM 信号的周期。
  * @param   psc   定时器预分频器 (PSC) 的值，决定定时器计数频率。
- * @param   ccp   比较寄存器 (CCR) 的值，决定 PWM 信号的占空比。
+ * @param   ccp   比较寄存器 (CCR) 的值，决定 初始 PWM 信号的占空比。
  *
- * @note    配置 TIM1 为 PWM 输出模式，PWM 通道使用 TIM1_CH3 (pc3) 引脚。
+ * @note    配置 TIM1 为 PWM 输出模式，使用多个通道：
+ *          - TIM1_CH1N (PD0) 用于照明LED控制
+ *          - TIM1_CH2N (PA2) 用于风扇控制
+ *          - TIM1_CH3 (PC3) 用于屏幕背光控制
  *          TIM1 被设置为向上计数模式，PWM 模式 2，输出高电平时有效。
- *          TIM1 的自动重装载寄存器和预分频器被初始化为用户传入的参数值。
- *          定时器计数到 ARR 值时会自动重载并产生更新事件。
+ *          所有通道均使用相同的 ARR 和 PSC 值进行初始化。
  *
  * @retval  None
  */
 
-// 100us触发一次中断
+// 初始化TIM1，配置三路PWM输出
 void TIM1_Init(u16 arr, u16 psc, u16 ccp)
 {
-
     TIM_OCInitTypeDef TIM_OCInitStructure = {0};
     TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure = {0};
     NVIC_InitTypeDef NVIC_InitStructure;
+    
+    // 使能TIM1时钟
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1, ENABLE);
 
+    // 配置TIM1基本参数
     TIM_TimeBaseStructure.TIM_Period = arr;
     TIM_TimeBaseStructure.TIM_Prescaler = psc;
     TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
     TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
     TIM_TimeBaseInit(TIM1, &TIM_TimeBaseStructure);
 
+    // 通用PWM配置 
     TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM2;
     TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
     TIM_OCInitStructure.TIM_Pulse = ccp;
     TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_Low;
+    
+    // 配置通道1N (照明LED - PD0)
+    TIM_OCInitStructure.TIM_OutputNState = TIM_OutputNState_Enable;
+    TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCNPolarity_Low;
+    TIM_OC1Init(TIM1, &TIM_OCInitStructure);
+    TIM_OC1PreloadConfig(TIM1, TIM_OCPreload_Disable);
+    
+    // 配置通道2N (风扇 - PA2)
+    TIM_OC2Init(TIM1, &TIM_OCInitStructure);
+    TIM_OC2PreloadConfig(TIM1, TIM_OCPreload_Disable);
+    
+    // 配置通道3 (屏幕背光 - PC3)
+    TIM_OCInitStructure.TIM_OutputNState = TIM_OutputNState_Disable; // CH3没有互补输出
     TIM_OC3Init(TIM1, &TIM_OCInitStructure);
-
     TIM_OC3PreloadConfig(TIM1, TIM_OCPreload_Disable);
+
+    // 使能ARR预加载寄存器
     TIM_ARRPreloadConfig(TIM1, ENABLE);
+    
+    // 使能TIM1主输出
+    TIM_CtrlPWMOutputs(TIM1, ENABLE);
+    
+    // 使能TIM1
     TIM_Cmd(TIM1, ENABLE);
 
     // 配置定时器中断

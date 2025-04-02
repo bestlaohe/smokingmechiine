@@ -23,11 +23,11 @@ void SPI_FullDuplex_Init(void)
     // 配置 SPI 参数
     SPI_InitStructure.SPI_Direction = SPI_Direction_2Lines_FullDuplex; // 设置为全双工模式
     SPI_InitStructure.SPI_Mode = SPI_Mode_Master;                      // 设置为主模式
-    SPI_InitStructure.SPI_DataSize = SPI_DataSize_8b;                  // 数据大小设置为 16 位
-    SPI_InitStructure.SPI_CPOL = SPI_CPOL_Low;                         // 时钟极性设置为高**************************一开始设置高哦，因为lora所以修改
-    SPI_InitStructure.SPI_CPHA = SPI_CPHA_1Edge;                       // 时钟相位设置为第二个边缘*************一开始设置位第二，因为lora所以修改
-    SPI_InitStructure.SPI_NSS = SPI_NSS_Soft;                          // NSS 管脚设置为硬件控制
-    SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_4; // 波特率预分频设置为 64
+    SPI_InitStructure.SPI_DataSize = SPI_DataSize_8b;                  // 数据大小设置为 8 位
+    SPI_InitStructure.SPI_CPOL = SPI_CPOL_Low;                         // 时钟极性设置为低电平
+    SPI_InitStructure.SPI_CPHA = SPI_CPHA_1Edge;                       // 时钟相位设置为第一个边缘
+    SPI_InitStructure.SPI_NSS = SPI_NSS_Soft;                          // NSS 管脚设置为软件控制
+    SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_4; // 波特率预分频设置为 4
     SPI_InitStructure.SPI_FirstBit = SPI_FirstBit_MSB;                 // 数据位顺序设置为 MSB 优先
 
     SPI_InitStructure.SPI_CRCPolynomial = 7; // CRC 多项式设置为 7
@@ -86,10 +86,6 @@ void delay_us(uint16_t num)
 
 u8 Screen_spi_write(uint8_t _dat)
 {
-    while (!READ_LORA_CS)
-    {
-        DEBUG_PRINT("wait lora cs 1!\r\n");
-    }
     u8 retry = 0;
     while (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE) == RESET)
     {
@@ -114,6 +110,26 @@ u8 Screen_spi_write(uint8_t _dat)
     } // 还没收完
 
     return (uint8_t)SPI_I2S_ReceiveData(SPI1);
+}
+
+void LCD_Drive_Init(void)
+{
+    SPI_FullDuplex_Init();
+
+    // 硬件复位
+    LCD_RST_1;
+    delay_us(10000);
+    LCD_RST_0;
+    delay_us(10000);
+    LCD_RST_1;
+    delay_us(10000);
+}
+
+void LCD_Drive_DeInit(void)
+{
+    LCD_RST_0; // 使能复位
+    SPI_Cmd(SPI1, DISABLE);
+    SPI_I2S_DeInit(SPI1);
 }
 
 

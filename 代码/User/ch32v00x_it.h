@@ -14,7 +14,6 @@
 
 #include "debug.h"
 #include "gpio.h"
-#include "SX1278.h"
 #include "time_app.h"
 #include "drive_screen.h"
 #include "seting.h"
@@ -81,8 +80,6 @@ typedef struct
 extern volatile u8 needSleep;
 extern volatile u8 needDeinit;//改成u8就无法正常休眠
 
-
-void process_motor_flags(void);
 void refresh_SleepCounter(int newtime);
 void EXTI_INT_INIT(void);
 void Sleep_Scan();

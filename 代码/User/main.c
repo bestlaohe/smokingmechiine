@@ -1,7 +1,6 @@
 #include "debug.h"
 #include "encode.h" // timeapp->encode->main
 #include "adc.h"    // timeapp->pwm.screen->Screen_api->adc->main
-#include "SX1278.h" // gpio->SX1278->page
 #include "page.h"
 #include "seting.h"
 
@@ -48,8 +47,17 @@ int main(void)
   TIM2_Init(11, 1); // 编码器的内容,重载值为65535，不分频，1圈12个****6020-6900=880字节输入捕获要500多+定时器300
 #endif
 
+  // 初始化TIM1，设置默认值
+  // 参数：预装载值arr(100), 预分频器psc, 初始占空比duty(0-100)
+  TIM1_Init(100, (SystemCoreClock / (100 * PWM_FRE)) - 1, PWM_Duty);
+  
+  // 设置初始风扇速度为50%
+  FAN_SetSpeed(fan_speed);
+  
+  // 设置初始照明LED亮度为80%
+  LED_SetLight(led_light);
+
 #if SCREEN_ENABLED
-  TIM1_Init(100, (SystemCoreClock / (100 * PWM_FRE)) - 1, PWM_Duty); // 屏幕的背光调节  默认百分百亮度******5076-4484=592字节pwm要200多+定时器300
   LCD_Drive_Init();    // 屏幕硬件初始化****200字节
   LCD_SHOW_API_INIT(); // 屏幕测试******8404-6224=2180
 #endif
@@ -58,11 +66,7 @@ int main(void)
   Battery_Init(); // 电池的adc初始化****9456-8636=820
 #endif
 
-#if LORA_ENABLED
-  SX1278_Init(); // lora的初始化*****10268-9620=648
-#endif
-
-  EXTI_INT_INIT(); // 按键，充电，lora中断初始化
+  EXTI_INT_INIT(); // 按键，充电中断初始化
   //   startup_animation();                                             // 开机动画
 
   IWDG_Feed_Init(IWDG_Prescaler_256, 4000); // 该参数必须是介于 0 和 0x0FFF 之间的一个数值    // 4秒不喂狗就复位   低频时钟内部128khz除以256=500,1除以500乘以4000=8s****12467-12356=111字节
@@ -82,17 +86,7 @@ int main(void)
     }
     else
     {
-      //      u8 data[] = "rr";
-      //      SX1278_LoRaTxPacket(data, 2);
-      // DEBUG_PRINT("\r\nshow_page");
       show_page();
-
-      // 处理电机震动标志位
-      process_motor_flags();
-
-#if LORA_ENABLED
-      SX1278_Receive();
-#endif
 
 #if ENCODER_ENABLED
       Encoder_Scan();

@@ -5,77 +5,58 @@
  *      Author: 12630
  */
 
-#ifndef SCREEN_PAGE_H_
-#define SCREEN_PAGE_H_
-#include "debug.h"
-#include "encode.h"
-#include "adc.h"
+#ifndef PAGE_H_
+#define PAGE_H_
+
+#include "screen_api.h"
+#include "fonts.h"
+#include <stdio.h>
+#include "ch32v00x.h"
 #include "seting.h"
 
-// #include "SX1278.h"
-
-extern Key key;
-
-extern Encode encode_struct;
-extern volatile u8 lora_receive_len;
-extern volatile u8 lora_receive_flag;
-
-extern char lora_receive_buf[145];
-extern u16 Battery_ADC_Average;
-
-#define ON 1
-#define OFF 0
-
-// Lora参数范围定义
-#define LORAFREQ_MIN 1
-#define LORAFREQ_MAX 11
-#define LORAPOWER_MIN 11
-#define LORAPOWER_MAX 20
-#define LORASpreadFactor_MIN 7
-#define LORASpreadFactor_MAX 12
-#define LORABANDWIDTH_MIN 0
-#define LORABANDWIDTH_MAX 9
-
-// 定义设置参数
-typedef enum
-{
-  SETTING_SCREEN_LIGHT,
-  SETTING_SHAKE_MODE,
-  SETTING_LORA_FREQ,
-  SETTING_LORA_POWER,
-  SETTING_LORA_BANDWIDTH,
-  SETTING_LORA_SPREAD_FACTOR,
-  SETTING_COUNT
-} SettingIndex;
-
-extern u8 shake_mode;        // 振动模式，0为off，1为on
-extern u8 Lora_Freq;         // 默认频率设置
-extern u8 Lora_Power;        // 输出功率设置
-extern u8 Lora_BandWide;     // 带宽设置
-extern u8 Lora_SpreadFactor; // 扩频因子设置在7~12= 7
-
-typedef struct
-{
-  const char *name;
-  u8 *value;
-  void (*update_func)(void);
-} Setting;
-// 定义按键事件
-typedef enum
-{
-  PAGE_SEND, // 发送页面
-  PAGE_PERPARE_SETTING, // 准备设置页面
-  PAGE_HISTROY_CHAT,
-
-  PAGE_SETTING, // 设置页面
-  PAGE_INFO,    // 信息页面
+// 定义页面类型
+typedef enum {
+    PAGE_SETTING = 0,  // 设置页面，简化为只有一个页面
 } Page;
 
-void chat_page(sFONT *Font);
-void show_history_data(sFONT *Font);
-void chat_history_page(sFONT *Font);
-void perpare_setting_page(sFONT *Font);
+// 定义按钮状态,可开关的选项
+typedef enum {
+    OFF = 0,
+    ON = 1,
+} BUTTON_STATE;
+
+// 设置选项索引
+typedef enum {
+    SETTING_SCREEN_LIGHT = 0,  // 屏幕亮度
+    SETTING_FAN_SPEED = 1,     // 风扇速度
+    SETTING_LED_LIGHT = 2,     // 照明LED亮度
+    SETTING_COUNT = 3          // 设置总数
+} SettingIndex;
+
+// 设置结构体定义
+typedef struct {
+    char *name;            // 设置名称
+    u8 *value;            // 设置值的指针
+    void (*update_func)(void); // 更新函数指针
+} Setting;
+
+// 变量声明
+extern u8 current_setting;               // 当前设置项
+extern u8 refreshState;                 // 刷新标志
+extern u8 isFirstSettingShow;           // 首次设置显示标志
+extern u8 isFirstBattaryShow;           // 首次电池显示标志
+extern Page page;                       // 当前页面
+extern Setting settings[SETTING_COUNT]; // 设置数组
+extern u8 fan_speed;                    // 风扇速度值
+extern u8 led_light;                    // 照明LED亮度值
+
+// 函数声明
+void show_page(void);
 void setting_page(sFONT *Font);
-void show_page();
-void info_page();
-#endif /* SCREEN_PAGE_H_ */
+void update_current_setting(int value);
+void clamp_value(int *value, int min, int max);
+void FAN_SetSpeed(uint8_t percentage);
+void LED_SetLight(uint8_t percentage);
+void show_battery(int x, int y, UWORD back_color, UWORD front_color, u8 *isFirstBattaryShow);
+
+#endif /* PAGE_H_ */
