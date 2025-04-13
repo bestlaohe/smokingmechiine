@@ -137,6 +137,7 @@ void draw_setting(int index, int highlight, sFONT *Font)
   int bar_x = 0;
   int bar_y = index * CHAR_HEIGHT + Y_OFFSET + 16;
   int filled_width = bar_width * (*settings[index].value) / 100;
+    Paint_DrawRectangle(bar_x, bar_y, bar_x + 80, bar_y + bar_height, MY_THEME_BACK_COLOR, DOT_PIXEL_1X1, DRAW_FILL_FULL);
 
   // 绘制空白进度条
   Paint_DrawRectangle(bar_x, bar_y, bar_x + bar_width, bar_y + bar_height, 0x7BEF, DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
@@ -162,7 +163,7 @@ void display_settings(sFONT *Font)
   if (refreshState)
   {
     // 清屏
-    Screen_Clear(0, 0, LCD_WIDTH, LCD_HEIGHT, MY_THEME_BACK_COLOR);
+    // Screen_Clear(0, 0, LCD_WIDTH, LCD_HEIGHT, MY_THEME_BACK_COLOR);
 
     needShowBattery = 1;
     // 吸烟机
