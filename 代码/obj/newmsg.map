@@ -1915,33 +1915,33 @@ OUTPUT(newmsg.elf elf32-littleriscv)
  .debug_ranges  0x0000000000000de8       0x20 ./Gpio/gpio.o
  .debug_ranges  0x0000000000000e08       0x90 ./Debug/debug.o
 
-.debug_line     0x0000000000000000    0x11182
+.debug_line     0x0000000000000000    0x11188
  .debug_line    0x0000000000000000     0x1bd4 ./screen/GUI_Paint.o
  .debug_line    0x0000000000001bd4      0x706 ./screen/drive_screen.o
  .debug_line    0x00000000000022da      0x115 ./screen/font12.o
  .debug_line    0x00000000000023ef      0x115 ./screen/font16.o
- .debug_line    0x0000000000002504      0xba3 ./screen/page.o
- .debug_line    0x00000000000030a7     0x10c4 ./screen/screen_api.o
- .debug_line    0x000000000000416b      0x4ba ./encode/encode.o
- .debug_line    0x0000000000004625      0xb59 ./adc/adc.o
- .debug_line    0x000000000000517e      0xde3 ./User/ch32v00x_it.o
- .debug_line    0x0000000000005f61      0x553 ./User/main.o
- .debug_line    0x00000000000064b4      0x5bd ./User/system_ch32v00x.o
- .debug_line    0x0000000000006a71      0x77f ./Time/time_app.o
- .debug_line    0x00000000000071f0      0x112 ./Startup/startup_ch32v00x.o
- .debug_line    0x0000000000007302     0x1436 ./Peripheral/src/ch32v00x_adc.o
- .debug_line    0x0000000000008738      0x791 ./Peripheral/src/ch32v00x_dma.o
- .debug_line    0x0000000000008ec9      0x5ca ./Peripheral/src/ch32v00x_exti.o
- .debug_line    0x0000000000009493      0xbf1 ./Peripheral/src/ch32v00x_gpio.o
- .debug_line    0x000000000000a084      0x3e9 ./Peripheral/src/ch32v00x_iwdg.o
- .debug_line    0x000000000000a46d      0x3d1 ./Peripheral/src/ch32v00x_misc.o
- .debug_line    0x000000000000a83e      0x64d ./Peripheral/src/ch32v00x_pwr.o
- .debug_line    0x000000000000ae8b      0xdf8 ./Peripheral/src/ch32v00x_rcc.o
- .debug_line    0x000000000000bc83      0x9cb ./Peripheral/src/ch32v00x_spi.o
- .debug_line    0x000000000000c64e     0x2d64 ./Peripheral/src/ch32v00x_tim.o
- .debug_line    0x000000000000f3b2      0xf02 ./Peripheral/src/ch32v00x_usart.o
- .debug_line    0x00000000000102b4      0x3d1 ./Gpio/gpio.o
- .debug_line    0x0000000000010685      0xafd ./Debug/debug.o
+ .debug_line    0x0000000000002504      0xba9 ./screen/page.o
+ .debug_line    0x00000000000030ad     0x10c4 ./screen/screen_api.o
+ .debug_line    0x0000000000004171      0x4ba ./encode/encode.o
+ .debug_line    0x000000000000462b      0xb59 ./adc/adc.o
+ .debug_line    0x0000000000005184      0xde3 ./User/ch32v00x_it.o
+ .debug_line    0x0000000000005f67      0x553 ./User/main.o
+ .debug_line    0x00000000000064ba      0x5bd ./User/system_ch32v00x.o
+ .debug_line    0x0000000000006a77      0x77f ./Time/time_app.o
+ .debug_line    0x00000000000071f6      0x112 ./Startup/startup_ch32v00x.o
+ .debug_line    0x0000000000007308     0x1436 ./Peripheral/src/ch32v00x_adc.o
+ .debug_line    0x000000000000873e      0x791 ./Peripheral/src/ch32v00x_dma.o
+ .debug_line    0x0000000000008ecf      0x5ca ./Peripheral/src/ch32v00x_exti.o
+ .debug_line    0x0000000000009499      0xbf1 ./Peripheral/src/ch32v00x_gpio.o
+ .debug_line    0x000000000000a08a      0x3e9 ./Peripheral/src/ch32v00x_iwdg.o
+ .debug_line    0x000000000000a473      0x3d1 ./Peripheral/src/ch32v00x_misc.o
+ .debug_line    0x000000000000a844      0x64d ./Peripheral/src/ch32v00x_pwr.o
+ .debug_line    0x000000000000ae91      0xdf8 ./Peripheral/src/ch32v00x_rcc.o
+ .debug_line    0x000000000000bc89      0x9cb ./Peripheral/src/ch32v00x_spi.o
+ .debug_line    0x000000000000c654     0x2d64 ./Peripheral/src/ch32v00x_tim.o
+ .debug_line    0x000000000000f3b8      0xf02 ./Peripheral/src/ch32v00x_usart.o
+ .debug_line    0x00000000000102ba      0x3d1 ./Gpio/gpio.o
+ .debug_line    0x000000000001068b      0xafd ./Debug/debug.o
 
 .debug_str      0x0000000000000000     0x3eac
  .debug_str     0x0000000000000000      0xba9 ./screen/GUI_Paint.o

@@ -45,34 +45,34 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 SECONDARY_FLASH += \
-newmsg.hex \
+smokingmeshine.hex \
 
 SECONDARY_LIST += \
-newmsg.lst \
+smokingmeshine.lst \
 
 SECONDARY_SIZE += \
-newmsg.siz \
+smokingmeshine.siz \
 
 
 # 所有目标
-all: newmsg.elf secondary-outputs
+all: smokingmeshine.elf secondary-outputs
 
 # 工具调用
-newmsg.elf: $(OBJS) $(USER_OBJS)
-	@	@	riscv-none-embed-gcc -march=rv32ecxw -mabi=ilp32e -msmall-data-limit=0 -msave-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused -Wuninitialized  -g -T "C:\Users\12630\Desktop\SmokingMachine\代码\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"newmsg.map" --specs=nano.specs --specs=nosys.specs -o "newmsg.elf" $(OBJS) $(USER_OBJS) $(LIBS) -lprintf
+smokingmeshine.elf: $(OBJS) $(USER_OBJS)
+	@	@	riscv-none-embed-gcc -march=rv32ecxw -mabi=ilp32e -msmall-data-limit=0 -msave-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused -Wuninitialized  -g -T "C:\Users\12630\Desktop\SmokingMachine\代码\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"smokingmeshine.map" --specs=nano.specs --specs=nosys.specs -o "smokingmeshine.elf" $(OBJS) $(USER_OBJS) $(LIBS) -lprintf
 	@	@
-newmsg.hex: newmsg.elf
-	@	riscv-none-embed-objcopy -O ihex "newmsg.elf"  "newmsg.hex"
+smokingmeshine.hex: smokingmeshine.elf
+	@	riscv-none-embed-objcopy -O ihex "smokingmeshine.elf"  "smokingmeshine.hex"
 	@	@
-newmsg.lst: newmsg.elf
-	@	riscv-none-embed-objdump --all-headers --demangle --disassemble -M xw "newmsg.elf" > "newmsg.lst"
+smokingmeshine.lst: smokingmeshine.elf
+	@	riscv-none-embed-objdump --all-headers --demangle --disassemble -M xw "smokingmeshine.elf" > "smokingmeshine.lst"
 	@	@
-newmsg.siz: newmsg.elf
-	@	riscv-none-embed-size --format=berkeley "newmsg.elf"
+smokingmeshine.siz: smokingmeshine.elf
+	@	riscv-none-embed-size --format=berkeley "smokingmeshine.elf"
 	@	@
 # 其他目标
 clean:
-	-$(RM) $(ASM_UPPER_DEPS)$(OBJS)$(SECONDARY_FLASH)$(SECONDARY_LIST)$(SECONDARY_SIZE)$(ASM_DEPS)$(S_DEPS)$(S_UPPER_DEPS)$(C_DEPS) newmsg.elf
+	-$(RM) $(ASM_UPPER_DEPS)$(OBJS)$(SECONDARY_FLASH)$(SECONDARY_LIST)$(SECONDARY_SIZE)$(ASM_DEPS)$(S_DEPS)$(S_UPPER_DEPS)$(C_DEPS) smokingmeshine.elf
 	-@
 secondary-outputs: $(SECONDARY_FLASH) $(SECONDARY_LIST) $(SECONDARY_SIZE)
 

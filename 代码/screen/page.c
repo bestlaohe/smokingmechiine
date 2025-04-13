@@ -129,7 +129,7 @@ void draw_setting(int index, int highlight, sFONT *Font)
   Paint_DrawString(0, index * CHAR_HEIGHT + Y_OFFSET, settings[index].name, Font, MY_THEME_BACK_COLOR, highlight ? bg_color : text_color, 'a', 999);
   
   // 显示数值
-  intToStr(*settings[index].value, strBuf, 3);
+    intToStr(*settings[index].value, strBuf, 3);
   Paint_DrawString(Font->Width * (strlen(settings[index].name) + 3), index * CHAR_HEIGHT + Y_OFFSET, strBuf, &Font16_Num, MY_THEME_BACK_COLOR, highlight ? bg_color : text_color, '0', 999);
   
   // 绘制百分比符号
@@ -238,7 +238,7 @@ void setting_page(sFONT *Font)
   static u8 needShowBattery = 1;
   show_battery(90, 2, MY_THEME_BACK_COLOR, MY_THEME_COMPONT_COLOR, &needShowBattery);
 #endif
-  
+
   // 显示设置项
   display_settings(Font);
   
@@ -249,7 +249,7 @@ void setting_page(sFONT *Font)
 // 主页面显示函数
 void show_page()
 {
-  setting_page(&Font16_En);
+    setting_page(&Font16_En);
 
   // 处理完事件后清除事件
   extern Key key;  // 引用Key结构体，注意使用小写k
