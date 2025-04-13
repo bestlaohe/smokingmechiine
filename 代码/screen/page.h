@@ -13,7 +13,9 @@
 #include <stdio.h>
 #include "ch32v00x.h"
 #include "seting.h"
-
+  // 处理完事件后清除事件
+  extern Key key;  // 引用Key结构体，注意使用小写k
+  extern Encode encode_struct;  // 引用编码器结构
 // 定义页面类型
 typedef enum {
     PAGE_SETTING = 0,  // 设置页面，简化为只有一个页面

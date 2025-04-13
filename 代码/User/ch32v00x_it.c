@@ -119,7 +119,7 @@ void EXTI7_0_IRQHandler(void)
     if (!KEY0)
     {
       key.state = KEY_STATE_PRESS;
-      DEBUG_PRINT("start press\r\n");
+ DEBUG_PRINT("start press\r\n");
     }
     else
     {
@@ -258,47 +258,44 @@ void HardFault_Handler(void)
  */
 void EXTI_INT_INIT(void)
 {
-  GPIO_InitTypeDef GPIO_InitStructure = {0};
   EXTI_InitTypeDef EXTI_InitStructure = {0};
   NVIC_InitTypeDef NVIC_InitStructure = {0};
 
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO | RCC_APB2Periph_GPIOD | RCC_APB2Periph_GPIOC, ENABLE);
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
 
-  // SW按键中断，按键上拉，低电平有效
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-  GPIO_Init(GPIOD, &GPIO_InitStructure);
+  // GPIO_EXTILineConfig(GPIO_PortSourceGPIOD, GPIO_PinSource6|GPIO_PinSource2|GPIO_PinSource7);
 
-  // 计费检测，低电平为充电
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-  GPIO_Init(GPIOC, &GPIO_InitStructure);
+  GPIO_EXTILineConfig(GPIO_PortSourceGPIOC, GPIO_PinSource1);
+  GPIO_EXTILineConfig(GPIO_PortSourceGPIOD, GPIO_PinSource6);
+  GPIO_EXTILineConfig(GPIO_PortSourceGPIOD, GPIO_PinSource2);
 
-  // 配置中断线路0-7
-  /* EXTI line gpio config */
-  EXTI_InitStructure.EXTI_Line = EXTI_Line2;
+  EXTI_InitStructure.EXTI_Line = EXTI_Line2 | EXTI_Line1; // key和charge
   EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
   EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising_Falling;
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);
 
-  // 充电
-  EXTI_InitStructure.EXTI_Line = EXTI_Line1;
+
+
+  EXTI_InitStructure.EXTI_Line = EXTI_Line9; // AWU
   EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
-  EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising_Falling;
+  EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);
 
-  // 中断向量分配 外部中断0-7
-  NVIC_InitStructure.NVIC_IRQChannel = EXTI7_0_IRQn;
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1; // 优先级可以按照需要调整
+  NVIC_InitStructure.NVIC_IRQChannel = AWU_IRQn;
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
 
-  DEBUG_PRINT("EXTI_INT_INIT\r\n");
-}
+  NVIC_InitStructure.NVIC_IRQChannel = EXTI7_0_IRQn;
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;
+  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 
+  NVIC_Init(&NVIC_InitStructure);
+}
 void system_wokeup()
 {
 

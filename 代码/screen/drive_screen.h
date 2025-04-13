@@ -40,10 +40,4 @@ u8 Screen_spi_write(uint8_t _dat);
 
 void SPI_DMA_Tx_Init(DMA_Channel_TypeDef *DMA_CHx, u32 ppadr, u32 memadr, u16 bufsize,uint32_t mode,uint32_t MemoryInc);
 
-// 重命名后的基本初始化函数
-void LCD_Drive_Init_Basic(void);
-void LCD_Drive_DeInit_Basic(void);
-
-void delay_us(uint16_t num);
-
 #endif /* SCREEN_DRIVE_SCREEN_H_ */

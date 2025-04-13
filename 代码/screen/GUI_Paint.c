@@ -541,7 +541,7 @@ void Paint_DrawChar(UWORD Xpoint, UWORD Ypoint, const char Acsii_Char,
     if (Font == &Font16_En) {
         // 查找字符在映射表中的位置
         int map_index = -1;
-        for (int i = 0; i < 16; i++) {  // 目前映射表有16个字符
+        for (int i = 0; i < 17; i++) {  // 目前映射表有16个字符
             if (Font16_english_map[i] == Acsii_Char) {
                 map_index = i;
                 break;

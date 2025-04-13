@@ -9,16 +9,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-
-// 减小显存大小，只保留必要的大小
-// 原始：uint8_t lcd_gram[Y_MAX_PIXEL * X_MAX_PIXEL * 2] = {0};
-#if USE_DMA
-// 使用更小的显存，根据实际需要调整大小
-uint8_t lcd_gram[(Y_MAX_PIXEL/2) * (X_MAX_PIXEL/2) * 2] = {0}; ///< 开辟一块内存空间当显存使用
-#endif
-
-u8 dmaXoffset, dmaYoffset = 0;
-
 void startup_animation()
 {
     for (int s = 0, o; s <= 80; s += 2)
@@ -38,12 +28,68 @@ void startup_animation()
 }
 
 Screen_ATTRIBUTES LCD;
-
+uint8_t lcd_gram[Y_MAX_PIXEL * X_MAX_PIXEL * 2] = {0}; ///< 开辟一块内存空间当显存使用
+u8 dmaXoffset, dmaYoffset = 0;
 void LCD_SHOW_API_INIT()
 {
+
     Screen_Init(VERTICAL);
-    Screen_Clear(0, 0, 128, 128, MY_THEME_BACK_COLOR);
+    //    Delay_Ms(300);
+    // DEBUG_PRINT("Set Clear and Display Funtion\r\n");
+     Screen_Clear(0, 0, 128, 128, MY_THEME_BACK_COLOR);
+     
+    //  DEBUG_PRINT("Set Clear and Display Funtion\r\n");
     Paint_NewImage(LCD_WIDTH, LCD_HEIGHT, ROTATE_0, WHITE);
+
+
+   
+    //  DEBUG_PRINT("Set Clear and Display Funtion\r\n");
+
+    //    Screen_Init(VERTICAL);
+    //      Screen_Clear(BLACK);
+    //
+    //      DEBUG_PRINT("Paint_NewImage\r\n");
+    //      Paint_NewImage(LCD_WIDTH, LCD_HEIGHT, ROTATE_180, WHITE);
+    //
+    //      DEBUG_PRINT("Set Clear and Display Funtion\r\n");
+    //      //Paint_SetClearFuntion(Screen_Clear);
+    //     // Paint_SetDisplayFuntion(Screen_DrawPaint);
+    //
+    //      DEBUG_PRINT("Paint_Clear\r\n");
+    //      //Paint_Clear(BLACK);
+    //
+    //      DEBUG_PRINT("drawing...\r\n");
+    //      Paint_SetRotate(0);
+
+    //  DEBUG_PRINT("Set Clear and Display Funtion\r\n");
+    // Paint_SetClearFuntion(Screen_Clear);
+    // Paint_SetDisplayFuntion(Screen_DrawPaint);
+
+    //  DEBUG_PRINT("Screen_Clear\r\n");
+
+    // DEBUG_PRINT("drawing...\r\n");
+    //  Paint_SetRotate(0);
+
+    //       Paint_DrawString(5, 10, "123",        &Font24,  YELLOW, RED);
+    //       Paint_DrawString(5, 34, "ABC",        &Font24,  BLUE,   CYAN);
+
+    //  Paint_DrawFloatNum (5, 58 ,987.654321,3, &Font12,  WHITE,  BLACK);
+    //  Paint_DrawString_CN(0,80, "微雪电子",   &Font24CN,WHITE,  RED);
+    //     Paint_DrawImage(set,30,3,48,48);
+    //    Delay_Ms(3000);
+    //    Screen_Clear(WHITE);
+    //
+    ////  Paint_DrawRectangle(0, 10, 225, 58, RED     ,DOT_PIXEL_2X2,DRAW_FILL_EMPTY);
+    ////  Paint_DrawLine  (0, 10, 225, 58,    MAGENTA ,DOT_PIXEL_2X2,LINE_STYLE_SOLID);
+    ////  Paint_DrawLine  (0, 10, 125, 58,    MAGENTA ,DOT_PIXEL_2X2,LINE_STYLE_SOLID);
+    //    Paint_DrawCircle(35,50,  25,        BLUE    ,DOT_PIXEL_2X2,DRAW_FILL_EMPTY);
+    //    Paint_DrawCircle(65,50,  25,        BLACK   ,DOT_PIXEL_2X2,DRAW_FILL_EMPTY);
+    //    Paint_DrawCircle(95,50,  25,        RED     ,DOT_PIXEL_2X2,DRAW_FILL_EMPTY);
+    //    Paint_DrawCircle(50,75,  25,        YELLOW  ,DOT_PIXEL_2X2,DRAW_FILL_EMPTY);
+    //    Paint_DrawCircle(80,75,  25,        GREEN   ,DOT_PIXEL_2X2,DRAW_FILL_EMPTY);
+    //    Delay_Ms(3000);
+    //
+    //    DEBUG_PRINT("quit...\r\n");
 }
 
 /*****************************************************************************
@@ -302,6 +348,7 @@ u8 Screen_Clear(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color)
 {
 
 #if USE_DMA
+
     int dma_circular = 0;
     u8 retry = 0;
     Screen_SetWindows(Xstart, Ystart, Xend + 0, Yend + 0);
@@ -311,18 +358,12 @@ u8 Screen_Clear(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color)
     uint8_t high_byte = (Color >> 8) & 0xff; // 高字节
     uint8_t low_byte = Color & 0xff;         // 低字节
 
-    // 修改为使用更小的缓冲区
-    int buf_width = X_MAX_PIXEL/2;
-    int buf_height = Y_MAX_PIXEL/2;
-    
-    for (int i = 0; i < buf_width; i++)
+    for (int i = 0; i < X_MAX_PIXEL; i++)
     {
-        for (int j = 0; j < buf_height; j++)
+        for (int j = 0; j < Y_MAX_PIXEL; j++)
         {
-            if (index < sizeof(lcd_gram)) {
-                lcd_gram[index++] = high_byte; // 高字节
-                lcd_gram[index++] = low_byte;  // 低字节
-            }
+            lcd_gram[index++] = high_byte; // 高字节
+            lcd_gram[index++] = low_byte;  // 低字节
         }
     }
 
@@ -330,15 +371,12 @@ u8 Screen_Clear(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color)
     LCD_CS_ENABLE;
 
     // 初始化DMA传输
-    SPI_DMA_Tx_Init(DMA1_Channel3, (u32)&SPI1->DATAR, (u32)lcd_gram, 
-                    buf_width * buf_height * 2, DMA_Mode_Circular, DMA_MemoryInc_Enable);
+    SPI_DMA_Tx_Init(DMA1_Channel3, (u32)&SPI1->DATAR, (u32)lcd_gram, Y_MAX_PIXEL * X_MAX_PIXEL * 2, DMA_Mode_Circular, DMA_MemoryInc_Enable);
     SPI_I2S_DMACmd(SPI1, SPI_I2S_DMAReq_Tx, ENABLE);
     DMA_Cmd(DMA1_Channel3, ENABLE);
 
-    // 计算总传输次数 - 分多次传输以适应较小的缓冲区
-    int chunks_x = ((Xend - Xstart) + buf_width - 1) / buf_width; // 向上取整
-    int chunks_y = ((Yend - Ystart) + buf_height - 1) / buf_height; // 向上取整
-    int total_dma_transfers = chunks_x * chunks_y;
+    // 计算总传输次数
+    int total_dma_transfers = ((Yend - Ystart) * (Xend - Xstart) / (X_MAX_PIXEL * Y_MAX_PIXEL)) + 1;
 
     while (dma_circular <= total_dma_transfers)
     {
@@ -346,6 +384,9 @@ u8 Screen_Clear(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color)
         {
             dmaTransferComplete = 0;
             dma_circular++;
+
+            // 打印当前传输次数，帮助调试
+            // DEBUG_PRINT("Current DMA transfers: %d/%d\r\n", dma_circular, total_dma_transfers);
         }
     }
 
@@ -356,14 +397,16 @@ u8 Screen_Clear(UWORD Xstart, UWORD Ystart, UWORD Xend, UWORD Yend, UWORD Color)
     while (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE) == RESET)
     {
         // 可以考虑在此处添加超时逻辑，以防死循环
+        //  DEBUG_PRINT("Waiting for SPI transmit buffer to be empty...\r\n"); // 打印等待信息
     }
 
-    // 禁用DMA和SPI
-    DMA_Cmd(DMA1_Channel3, DISABLE);
-    SPI_I2S_DMACmd(SPI1, SPI_I2S_DMAReq_Tx, DISABLE);
+    // // 禁用DMA和SPI
+     DMA_Cmd(DMA1_Channel3, DISABLE);
+     SPI_I2S_DMACmd(SPI1, SPI_I2S_DMAReq_Tx, DISABLE);
     DMA_ClearITPendingBit(DMA1_IT_TC3);
 
     LCD_CS_DISABLE;
+    // DEBUG_PRINT("Screen_Clear OK\r\n"); // 等待SPI发送缓冲区为空
 
     while (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_RXNE) == RESET)
     {
@@ -437,16 +480,12 @@ u8 LCD_Refrsh_DMA(int pic_size)
 {
 
 #if USE_DMA
+
     // 将整个数据搬运一次到DMA
     LCD_DC_1;
     LCD_CS_ENABLE;
 
-    // 确保pic_size不超过lcd_gram的实际大小
-    int buf_size = (Y_MAX_PIXEL/2) * (X_MAX_PIXEL/2) * 2;
-    if (pic_size > buf_size) {
-        pic_size = buf_size;
-    }
-
+    // DEBUG_PRINT("开始刷屏\r\n");
     dmaTransferComplete = 0;
     SPI_I2S_DMACmd(SPI1, SPI_I2S_DMAReq_Tx, DISABLE);
     DMA_Cmd(DMA1_Channel3, DISABLE);
@@ -457,7 +496,7 @@ u8 LCD_Refrsh_DMA(int pic_size)
 
     while (!dmaTransferComplete)
     {
-        // 等待DMA传输完成
+        //  DEBUG_PRINT("wait normoldma ok %d\r\n", dmaTransferComplete); // 等待通道3传输完成标志
     }
     dmaTransferComplete = 0;
     DMA_ClearFlag(DMA1_FLAG_TC3); // 清除通道3传输完成标志
@@ -475,16 +514,14 @@ u8 LCD_Refrsh_DMA(int pic_size)
         retry++;
         if (retry > 200)
         {
+            // DEBUG_PRINT("rec spi outtime!\r\n");
             return 0;
         }
     } // 还没收完
 
     LCD_CS_DISABLE;
 
-    // 填充lcd_gram为全FF
-    if (pic_size <= buf_size) {
-        memset(lcd_gram, 0xff, pic_size);
-    }
+    memset(lcd_gram, 0xff, pic_size);
 
     return (uint8_t)SPI_I2S_ReceiveData(SPI1);
 
@@ -508,26 +545,21 @@ void Screen_DrawPaint(UWORD x, UWORD y, UWORD Color)
 #if USE_DMA
 
     ///< 使用DMA的话，从对点刷屏到对显存数组写入数据，DMA传输数据的时候再统一进行传输
-    int buf_width = X_MAX_PIXEL/2;
-    int buf_height = Y_MAX_PIXEL/2;
-    int buf_size = buf_width * buf_height * 2;
-    
-    // 计算索引时考虑缩小的显存大小
     int index = ((y - dmaYpoint) * (dmaFont->Width) + (x - dmaXpoint)) * 2; // 新的坐标过来转换成012345
-    
-    // 确保索引在有效范围内
-    if (index >= 0 && index < buf_size - 1) {
-        index = index - buf_width * buf_height * 2 * dmaXoffset / buf_width; // 偏移
-        lcd_gram[index] = (Color >> 8) & 0xff;                               // 高字节
-        lcd_gram[index + 1] = Color & 0xFF;                                  // 低字节
-    }
+    // DEBUG_PRINT("index开始偏移前:%d\r\n", index );
 
-    // 当显存填满时，刷新到屏幕
-    if ((index + 1) == (buf_size - 1))
+    index = index - X_MAX_PIXEL * Y_MAX_PIXEL * 2 * dmaXoffset / X_MAX_PIXEL; // 偏移
+    lcd_gram[index] = (Color >> 8) & 0xff;                                    // 高字节
+    lcd_gram[index + 1] = Color & 0xFF;                                       // 低字节
+                                                                              //  DEBUG_PRINT("开始偏移:%d\r\n", index + 1);
+
+    if ((index + 1) == (Y_MAX_PIXEL * X_MAX_PIXEL * 2 - 1))
     {
-        LCD_Refrsh_DMA(buf_size);
-        dmaXoffset = buf_width + dmaXoffset;
-        dmaYoffset = buf_height + dmaYoffset;
+
+        LCD_Refrsh_DMA(Y_MAX_PIXEL * X_MAX_PIXEL * 2);
+        dmaXoffset = X_MAX_PIXEL + dmaXoffset;
+        dmaYoffset = Y_MAX_PIXEL + dmaYoffset;
+        DEBUG_PRINT("dma ok\r\n");
     }
 
 #else
