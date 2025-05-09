@@ -52,7 +52,7 @@ void FAN_SetSpeed(uint8_t percentage)
     percentage = 100;
 
   // 计算PWM比较值
-  compare_value = percentage;
+  compare_value = (100 - percentage);
 
   // 设置风扇PWM输出
   TIM1->CH2CVR = compare_value;
@@ -68,7 +68,7 @@ void LED_SetLight(uint8_t percentage)
     percentage = 100;
 
   // 计算PWM比较值
-  compare_value = percentage;
+  compare_value = (100 - percentage);
 
   // 设置照明LED PWM输出
   TIM1->CH1CVR = compare_value;
@@ -111,23 +111,8 @@ void draw_setting(int index, int highlight, sFONT *Font)
 {
   char strBuf[4]; // 用于存储最多3位数字和一个终止符
   UWORD bg_color = highlight ? GREEN : MY_THEME_COMPONT_COLOR;
-   UWORD text_color = 0x07FF; // 青色，屏幕背光区域颜色
+  UWORD text_color = 0x07FF; // 青色，屏幕背光区域颜色
 
-  // // 为不同设置项选择不同的颜色
-  // switch (index)
-  // {
-  // case SETTING_SCREEN_LIGHT:
-  //   text_color = 0x07FF; // 青色，屏幕背光区域颜色
-  //   break;
-  // case SETTING_FAN_SPEED:
-  //   text_color = 0x07E0; // 绿色，风扇区域颜色
-  //   break;
-  // case SETTING_LED_LIGHT:
-  //   text_color = 0xFFE0; // 黄色，照明区域颜色
-  //   break;
-  // default:
-  //   text_color = MY_THEME_COMPONT_COLOR;
-  // }
   // 显示设置名
   Paint_DrawString(0, index * CHAR_HEIGHT + Y_OFFSET, settings[index].name, &Font16_setting, MY_THEME_BACK_COLOR, highlight ? bg_color : text_color, '0', 999);
 
@@ -137,7 +122,7 @@ void draw_setting(int index, int highlight, sFONT *Font)
   int bar_x = 0;
   int bar_y = index * CHAR_HEIGHT + Y_OFFSET + 16;
   int filled_width = bar_width * (*settings[index].value) / 100;
-    Paint_DrawRectangle(bar_x, bar_y, bar_x + 80, bar_y + bar_height, MY_THEME_BACK_COLOR, DOT_PIXEL_1X1, DRAW_FILL_FULL);
+  Paint_DrawRectangle(bar_x, bar_y, bar_x + 80, bar_y + bar_height, MY_THEME_BACK_COLOR, DOT_PIXEL_1X1, DRAW_FILL_FULL);
 
   // 绘制空白进度条
   Paint_DrawRectangle(bar_x, bar_y, bar_x + bar_width, bar_y + bar_height, 0x7BEF, DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
@@ -192,7 +177,7 @@ void handle_setting_event()
     refreshState = 1;
   }
 
-  if (key.event == KEY_EVENT_CLICK)
+  if (key.event == KEY_EVENT_CLICK || key.event == KEY_EVENT_LONG_CLICK)
   { // 确认键点击
     current_setting = (current_setting + 1) % SETTING_COUNT;
     refreshState = 1;

@@ -32,7 +32,7 @@
 #define BATTERY_Y 3   // 电池y坐标
 
 // PWM相关配置
-#define PWM_FRE         10000   // PWM频率(Hz)，用于风扇控制和照明LED
+#define PWM_FRE         150000   // PWM频率(Hz)，用于风扇控制和照明LED
 #define PWM_Duty        20      // 初始占空比(0-100%)
 
 // PWM引脚定义:
