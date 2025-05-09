@@ -21,6 +21,10 @@ void My_GPIO_Init()
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA | RCC_APB2Periph_GPIOC | RCC_APB2Periph_GPIOD, ENABLE);
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR, ENABLE);
 
+
+    // PC7 - RGB 控制
+    GPIO_Init_Pin(GPIOC, GPIO_Pin_7, GPIO_Mode_Out_PP);
+
     // PA1 - 电池电量检测 (ADC输入)
     GPIO_Init_Pin(GPIOA, GPIO_Pin_1, GPIO_Mode_AIN);
     

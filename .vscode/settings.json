@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.cpp": "cpp",
+        "gpio.h": "c",
+        "ws2812.h": "c"
+    }
+}

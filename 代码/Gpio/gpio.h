@@ -12,6 +12,11 @@
 void My_GPIO_Init();
 void My_GPIO_DeInit();
 
+
+// 显示屏SPI片选控制
+#define  WS2812_ENABLE GPIO_ResetBits(GPIOC, GPIO_Pin_7)
+#define  WS2812_DISABLE GPIO_SetBits(GPIOC, GPIO_Pin_7)
+
 // 显示屏SPI片选控制
 #define LCD_CS_ENABLE GPIO_ResetBits(GPIOC, GPIO_Pin_4)
 #define LCD_CS_DISABLE GPIO_SetBits(GPIOC, GPIO_Pin_4)

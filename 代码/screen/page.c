@@ -56,6 +56,7 @@ void FAN_SetSpeed(uint8_t percentage)
 
   // 设置风扇PWM输出
   TIM1->CH2CVR = compare_value;
+  WS2812_show_status(1,compare_value);
 }
 
 // 照明LED亮度控制函数
@@ -72,6 +73,7 @@ void LED_SetLight(uint8_t percentage)
 
   // 设置照明LED PWM输出
   TIM1->CH1CVR = compare_value;
+   WS2812_show_status(0,compare_value);
 }
 
 // 更新当前设置值

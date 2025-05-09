@@ -7,7 +7,7 @@
 
 #ifndef PAGE_H_
 #define PAGE_H_
-
+#include "ws2812.h"
 #include "screen_api.h"
 #include "fonts.h"
 #include <stdio.h>

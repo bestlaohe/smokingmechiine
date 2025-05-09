@@ -4,6 +4,7 @@
 #include "page.h"
 #include "seting.h"
 
+
 // 待机功耗最低，睡眠功耗其次
 // 16k=16,384
 // data是表示代码段（text segment）的大小，以字节为单位。代码段包含了程序的可执行指令。
@@ -41,15 +42,15 @@ int main(void)
 #if DEBUG_ENABLED != 0
   Check_Reset_Flag(); // 查询复位原因
 #endif
-  My_GPIO_Init();                                                    // IO口初始化****4484-4232=252字节
+  My_GPIO_Init(); // IO口初始化****4484-4232=252字节
 
 #if ENCODER_ENABLED
   TIM2_Init(11, 1); // 编码器的内容,重载值为65535，不分频，1圈12个****6020-6900=880字节输入捕获要500多+定时器300
 #endif
 
-  TIM1_Init(100, (SystemCoreClock / (100 * PWM_FRE)) - 1, PWM_Duty);  // 参数：预装载值arr(100), 预分频器psc, 初始占空比duty(0-100)
-     FAN_SetSpeed(0);
-LED_SetLight(0);
+  TIM1_Init(100, (SystemCoreClock / (100 * PWM_FRE)) - 1, PWM_Duty); // 参数：预装载值arr(100), 预分频器psc, 初始占空比duty(0-100)
+  FAN_SetSpeed(0);
+  LED_SetLight(0);
 
 #if SCREEN_ENABLED
 
@@ -69,6 +70,8 @@ LED_SetLight(0);
 #if SLEEP == 1
   AWU_Init(); // 唤醒时间为25/12.5大约是2s左右。
 #endif
+  WS2812_SetAll( 255, 0, 0);
+  WS2812_Update();
   while (1)
   {
 
