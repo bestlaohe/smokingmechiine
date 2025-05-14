@@ -124,7 +124,7 @@ void EXTI7_0_IRQHandler(void)
     else
     {
       DEBUG_PRINT("end press\r\n");
-      if (key.LongKeyCounter <= HOLD_TIME*(PWM_FRE/10000))
+      if (key.LongKeyCounter <= HOLD_TIME * (PWM_FRE / 10000))
       {
         key.event = KEY_EVENT_CLICK;
         DEBUG_PRINT("KEY_EVENT_CLICK ontime\r\n");
@@ -316,16 +316,13 @@ void system_wokeup()
     Battery_Init(); // 电池的adc初始化****9456-8636=820
 #endif
 
-#if LORA_ENABLED
-    //  SX1278_Init();                                                     // 可能需要初始化                                              // lora的初始化*****10268-9620=648
-#endif
-
     //  EXTI_INT_INIT();                                                   // 按键，充电，lora中断初始化
     USART_Printf_Init(115200);
 
     DEBUG_PRINT("system_wokeup\r\n");
 
     // 处理完事件后清除事件
+    key.enable = 0;
     key.event = KEY_EVENT_NONE;
     encode_struct.state = ENCODE_EVENT_NONE;
     needSleep = 0;
@@ -339,8 +336,6 @@ void system_enter_sleep()
   {
     DEBUG_PRINT("system_Deinit\r\n");
     // My_GPIO_DeInit();//唤醒不了打开的话
-
-
 
 #if SCREEN_ENABLED
     LCD_Drive_DeInit();
@@ -356,7 +351,7 @@ void system_enter_sleep()
     TIM2_DeInit(); // 编码器用
 #endif
 
-  USART_DeInit(USART1);
+    USART_DeInit(USART1);
     needDeinit = 0;
   }
 }
@@ -380,7 +375,7 @@ void TIM1_UP_IRQHandler(void)
 
 #if SLEEP == 1
     SleepCounter++;
-    if (SleepCounter >= SLEEP_TIME*(PWM_FRE/10000))
+    if (SleepCounter >= SLEEP_TIME * (PWM_FRE / 10000))
     {
       SleepCounter = 0;
       needSleep = 1;
@@ -392,7 +387,7 @@ void TIM1_UP_IRQHandler(void)
     if (!KEY0)
     {
       key.LongKeyCounter++;
-      if (key.LongKeyCounter >= DEBOUNCE_TIME*(PWM_FRE/10000)) // 消抖
+      if (key.LongKeyCounter >= DEBOUNCE_TIME * (PWM_FRE / 10000)) // 消抖
         key.state = KEY_STATE_HOLD;
     }
 

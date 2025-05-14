@@ -46,18 +46,18 @@
 #define DEBOUNCE_TIME 50        // 去抖动时间，单位：ms
 #define HOLD_TIME 3000          // 长按时间，单位：100us
 
-#define SLEEP_TIME 10*10000     // 大约30s触发一次睡眠
+#define SLEEP_TIME 30*10000     // 大约30s触发一次睡眠
 
-// 开启或关闭调试信息输出//千万记得休眠的时候串口被反初始化了，不要打印东西，不然会卡死
+// 开启或关闭调试信息输出
 #define DEBUG_ENABLED 0
 
 #if DEBUG_ENABLED == 2
     #define DEBUG_PRINT(fmt, ...) printf(fmt, ##__VA_ARGS__)
-    #define SLEEP 0  //是否要休眠
+    #define SLEEP 0  //是否要休眠//千万记得休眠的时候串口被反初始化了，不要打印东西，不然会卡死
 
 #elif DEBUG_ENABLED == 1
     #define DEBUG_PRINT(fmt, ...) my_uart_print(fmt)
-    #define SLEEP 0   //是否要休眠
+    #define SLEEP 0   //是否要休眠//千万记得休眠的时候串口被反初始化了，不要打印东西，不然会卡死
   
 #else
     #define DEBUG_PRINT(fmt, ...)
