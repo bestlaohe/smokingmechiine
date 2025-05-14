@@ -4,7 +4,6 @@
 #include "page.h"
 #include "seting.h"
 
-
 // 待机功耗最低，睡眠功耗其次
 // 16k=16,384
 // data是表示代码段（text segment）的大小，以字节为单位。代码段包含了程序的可执行指令。
@@ -49,29 +48,26 @@ int main(void)
 #endif
 
   TIM1_Init(100, (SystemCoreClock / (100 * PWM_FRE)) - 1, PWM_Duty); // 参数：预装载值arr(100), 预分频器psc, 初始占空比duty(0-100)
-  FAN_SetSpeed(0);
-  LED_SetLight(0);
 
 #if SCREEN_ENABLED
-
   LCD_Drive_Init();    // 屏幕硬件初始化****200字节
   LCD_SHOW_API_INIT(); // 屏幕测试******8404-6224=2180
 #endif
-  DEBUG_PRINT("ChipID22:%08x\r\n", DBGMCU_GetCHIPID());
 #if BATTERY_ENABLED
   Battery_Init(); // 电池的adc初始化****9456-8636=820
 #endif
-  DEBUG_PRINT("ChipID33:%08x\r\n", DBGMCU_GetCHIPID());
   EXTI_INT_INIT(); // 按键，充电中断初始化
-  //   startup_animation();                                             // 开机动画
+                   //   startup_animation();                                             // 开机动画
 
   IWDG_Feed_Init(IWDG_Prescaler_256, 4000); // 该参数必须是介于 0 和 0x0FFF 之间的一个数值    // 4秒不喂狗就复位   低频时钟内部128khz除以256=500,1除以500乘以4000=8s****12467-12356=111字节
-  DEBUG_PRINT("ChipID44:%08x\r\n", DBGMCU_GetCHIPID());
 #if SLEEP == 1
   AWU_Init(); // 唤醒时间为25/12.5大约是2s左右。
 #endif
-  WS2812_SetAll( 255, 0, 0);
-  WS2812_Update();
+
+  FAN_SetSpeed(0);
+
+  LED_SetLight(0);
+
   while (1)
   {
 

@@ -119,12 +119,12 @@ void EXTI7_0_IRQHandler(void)
     if (!KEY0)
     {
       key.state = KEY_STATE_PRESS;
- DEBUG_PRINT("start press\r\n");
+      DEBUG_PRINT("start press\r\n");
     }
     else
     {
       DEBUG_PRINT("end press\r\n");
-      if (key.LongKeyCounter <= HOLD_TIME)
+      if (key.LongKeyCounter <= HOLD_TIME*(PWM_FRE/10000))
       {
         key.event = KEY_EVENT_CLICK;
         DEBUG_PRINT("KEY_EVENT_CLICK ontime\r\n");
@@ -275,8 +275,6 @@ void EXTI_INT_INIT(void)
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);
 
-
-
   EXTI_InitStructure.EXTI_Line = EXTI_Line9; // AWU
   EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
   EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
@@ -307,7 +305,7 @@ void system_wokeup()
     TIM1_Init(100, (SystemCoreClock / (100 * PWM_FRE)) - 1, PWM_Duty); // 屏幕的背光调节  默认百分百亮度******5076-4484=592字节pwm要200多+定时器300
 
 #if ENCODER_ENABLED
-      TIM2_Init(11, 1);                                                  // 编码器的内容,重载值为65535，不分频，1圈12个****6020-6900=880字节输入捕获要500多+定时器300
+    TIM2_Init(11, 1); // 编码器的内容,重载值为65535，不分频，1圈12个****6020-6900=880字节输入捕获要500多+定时器300
 #endif
 
 #if SCREEN_ENABLED
@@ -387,7 +385,7 @@ void TIM1_UP_IRQHandler(void)
 
 #if SLEEP == 1
     SleepCounter++;
-    if (SleepCounter >= SLEEP_TIME)
+    if (SleepCounter >= SLEEP_TIME*(PWM_FRE/10000))
     {
       SleepCounter = 0;
       needSleep = 1;
@@ -399,7 +397,7 @@ void TIM1_UP_IRQHandler(void)
     if (!KEY0)
     {
       key.LongKeyCounter++;
-      if (key.LongKeyCounter >= DEBOUNCE_TIME) // 消抖
+      if (key.LongKeyCounter >= DEBOUNCE_TIME*(PWM_FRE/10000)) // 消抖
         key.state = KEY_STATE_HOLD;
     }
 
