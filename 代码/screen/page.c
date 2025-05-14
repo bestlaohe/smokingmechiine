@@ -202,6 +202,13 @@ void setting_page(sFONT *Font)
 
   // 处理编码器和按键事件
   handle_setting_event();
+
+ if (*settings[1].value!=0&&*settings[2].value!=0)
+  {
+    refresh_SleepCounter(0); // 刷新休眠时间
+  }
+
+ 
 }
 
 // 主页面显示函数

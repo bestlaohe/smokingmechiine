@@ -56,8 +56,8 @@ int main(void)
 #if BATTERY_ENABLED
   Battery_Init(); // 电池的adc初始化****9456-8636=820
 #endif
-  EXTI_INT_INIT(); // 按键，充电中断初始化
-                   //   startup_animation();                                             // 开机动画
+  EXTI_INT_INIT();     // 按键，充电中断初始化
+  startup_animation(); // 开机动画
 
   IWDG_Feed_Init(IWDG_Prescaler_256, 4000); // 该参数必须是介于 0 和 0x0FFF 之间的一个数值    // 4秒不喂狗就复位   低频时钟内部128khz除以256=500,1除以500乘以4000=8s****12467-12356=111字节
 #if SLEEP == 1

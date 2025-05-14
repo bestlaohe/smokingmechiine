@@ -340,12 +340,7 @@ void system_enter_sleep()
     DEBUG_PRINT("system_Deinit\r\n");
     // My_GPIO_DeInit();//唤醒不了打开的话
 
-#if LORA_ENABLED
 
-    SX1278_Sleep();
-
-    //  SX1278_Standby();
-#endif
 
 #if SCREEN_ENABLED
     LCD_Drive_DeInit();
@@ -361,7 +356,7 @@ void system_enter_sleep()
     TIM2_DeInit(); // 编码器用
 #endif
 
-    USART_DeInit(USART1);
+  USART_DeInit(USART1);
     needDeinit = 0;
   }
 }
