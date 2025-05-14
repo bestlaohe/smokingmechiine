@@ -43,12 +43,12 @@ void TIM1_Init(u16 arr, u16 psc, u16 ccp)
     // 通用PWM配置 
     TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM2;
     TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
-    TIM_OCInitStructure.TIM_Pulse = ccp;
-    TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_Low;
+
     
     // 配置通道1N (照明LED - PD0)
     TIM_OCInitStructure.TIM_OutputNState = TIM_OutputNState_Enable;
-    TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCNPolarity_Low;
+    TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCPolarity_High;
+    TIM_OCInitStructure.TIM_Pulse = 0;
     TIM_OC1Init(TIM1, &TIM_OCInitStructure);
     TIM_OC1PreloadConfig(TIM1, TIM_OCPreload_Disable);
     
@@ -58,6 +58,8 @@ void TIM1_Init(u16 arr, u16 psc, u16 ccp)
     
     // 配置通道3 (屏幕背光 - PC3)
     TIM_OCInitStructure.TIM_OutputNState = TIM_OutputNState_Disable; // CH3没有互补输出
+    TIM_OCInitStructure.TIM_Pulse = ccp;
+    TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCPolarity_Low;
     TIM_OC3Init(TIM1, &TIM_OCInitStructure);
     TIM_OC3PreloadConfig(TIM1, TIM_OCPreload_Disable);
 

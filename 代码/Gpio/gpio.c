@@ -72,6 +72,7 @@ void My_GPIO_Init()
 
     // 初始化完成后禁用SPI片选
     LCD_CS_DISABLE;
+
 }
 
 void My_GPIO_DeInit()

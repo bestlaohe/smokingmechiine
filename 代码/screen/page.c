@@ -45,34 +45,32 @@ void clamp_value(int *value, int min, int max)
 // 风扇速度控制函数
 void FAN_SetSpeed(uint8_t percentage)
 {
-  uint16_t compare_value = 0;
+
 
   // 确保百分比在0-100范围内
   if (percentage > 100)
     percentage = 100;
 
-  // 计算PWM比较值
-  compare_value = (100 - percentage);
+
 
   // 设置风扇PWM输出
-  TIM1->CH2CVR = compare_value;
+  TIM1->CH2CVR = percentage;
   WS2812_show_status(1,percentage);
 }
 
 // 照明LED亮度控制函数
 void LED_SetLight(uint8_t percentage)
 {
-  uint16_t compare_value = 0;
+
 
   // 确保百分比在0-100范围内
   if (percentage > 100)
     percentage = 100;
 
-  // 计算PWM比较值
-  compare_value = (100 - percentage);
+
 
   // 设置照明LED PWM输出
-  TIM1->CH1CVR = compare_value;
+  TIM1->CH1CVR = percentage;
    WS2812_show_status(0,percentage);
 }
 
@@ -143,7 +141,7 @@ void draw_setting(int index, int highlight, sFONT *Font)
 
   Paint_DrawChar(LCD_WIDTH - 4 * Font16_Num.Width + 3 * Font16_Num.Width, bar_y, 10, &Font16_Num, MY_THEME_BACK_COLOR, highlight ? bg_color : text_color, 0);
 }
-u8 needShowBattery = 1;
+
 // 显示所有设置项
 void display_settings(sFONT *Font)
 {
@@ -151,8 +149,8 @@ void display_settings(sFONT *Font)
   {
     // 清屏
     // Screen_Clear(0, 0, LCD_WIDTH, LCD_HEIGHT, MY_THEME_BACK_COLOR);
+ charge.needShowBattery = 1;
 
-    needShowBattery = 1;
     // 吸烟机
     Paint_DrawString(0, 0, "234", &Font16_setting, MY_THEME_BACK_COLOR, MY_THEME_COMPONT_COLOR, '0', 999);
 
@@ -193,7 +191,7 @@ void setting_page(sFONT *Font)
 #if BATTERY_ENABLED
   // 使用adc.c中的show_battery函数
 
-  show_battery(BATTERY_X, BATTERY_Y, MY_THEME_BACK_COLOR, MY_THEME_COMPONT_COLOR, &needShowBattery); // 显示电池信息
+  show_battery(BATTERY_X, BATTERY_Y, MY_THEME_BACK_COLOR, MY_THEME_COMPONT_COLOR); // 显示电池信息
 
 #endif
 

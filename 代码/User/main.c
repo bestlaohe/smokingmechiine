@@ -43,11 +43,14 @@ int main(void)
 #endif
   My_GPIO_Init(); // IO口初始化****4484-4232=252字节
 
+
 #if ENCODER_ENABLED
   TIM2_Init(11, 1); // 编码器的内容,重载值为65535，不分频，1圈12个****6020-6900=880字节输入捕获要500多+定时器300
 #endif
 
   TIM1_Init(100, (SystemCoreClock / (100 * PWM_FRE)) - 1, PWM_Duty); // 参数：预装载值arr(100), 预分频器psc, 初始占空比duty(0-100)
+  FAN_SetSpeed(0);
+  LED_SetLight(0);
 
 #if SCREEN_ENABLED
   LCD_Drive_Init();    // 屏幕硬件初始化****200字节
@@ -64,9 +67,7 @@ int main(void)
   AWU_Init(); // 唤醒时间为25/12.5大约是2s左右。
 #endif
 
-  FAN_SetSpeed(0);
 
-  LED_SetLight(0);
 
   while (1)
   {

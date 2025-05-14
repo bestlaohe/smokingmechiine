@@ -74,7 +74,7 @@ typedef enum
 typedef struct
 {
   ChargeState state; // µ±Ç°°´¼ü×´Ì¬
-
+  u8 needShowBattery ;
 } Charge;
 
 extern volatile u8 needSleep;

@@ -189,7 +189,7 @@ void DMA_Tx_Init(DMA_Channel_TypeDef *DMA_CHx, u32 ppadr, u32 memadr, u16 bufsiz
     NVIC_Init(&NVIC_InitStructure); // ÅäÖÃNVIC
 }
 
-void show_battery(UWORD Xpoint, UWORD Ypoint, UWORD Color_Background, UWORD Color_Foreground, u8 *needshow)
+void show_battery(UWORD Xpoint, UWORD Ypoint, UWORD Color_Background, UWORD Color_Foreground)
 {
 
     static u8 percentage = 0;
@@ -204,9 +204,9 @@ void show_battery(UWORD Xpoint, UWORD Ypoint, UWORD Color_Background, UWORD Colo
     if (percentage > 100)
         percentage = 100;
 
-    if(abs(Prepercentage - percentage) > 5 || *needshow)
+    if(abs(Prepercentage - percentage) > 5 || charge.needShowBattery )
     {
-        *needshow = 0;
+        charge.needShowBattery = 0;
         Prepercentage = percentage;
 
         u8 cnt = percentage / 25;
