@@ -11,9 +11,10 @@
  *******************************************************************************/
 #ifndef __CH32V00x_IT_H
 #define __CH32V00x_IT_H
-
+#include "ws2812.h"
 #include "debug.h"
 #include "gpio.h"
+
 #include "time_app.h"
 #include "drive_screen.h"
 #include "seting.h"
@@ -58,15 +59,14 @@ typedef enum
 typedef struct
 {
   EncodeState state; // 当前按键状态
- u8 enable;               // 使能
+  u8 enable;         // 使能
 } Encode;
-
 
 // 定义按键事件
 typedef enum
 {
-  UNCHARGING,   // 没充电
-  CHARGING, // 充电中
+  UNCHARGING, // 没充电
+  CHARGING,   // 充电中
 
 } ChargeState;
 
@@ -74,11 +74,11 @@ typedef enum
 typedef struct
 {
   ChargeState state; // 当前按键状态
-  u8 needShowBattery ;
+  u8 needShowBattery;
 } Charge;
 
 extern volatile u8 needSleep;
-extern volatile u8 needDeinit;//改成u8就无法正常休眠
+extern volatile u8 needDeinit; // 改成u8就无法正常休眠
 
 void refresh_SleepCounter(int newtime);
 void EXTI_INT_INIT(void);

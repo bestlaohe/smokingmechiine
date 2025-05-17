@@ -559,7 +559,7 @@ void Screen_DrawPaint(UWORD x, UWORD y, UWORD Color)
         LCD_Refrsh_DMA(Y_MAX_PIXEL * X_MAX_PIXEL * 2);
         dmaXoffset = X_MAX_PIXEL + dmaXoffset;
         dmaYoffset = Y_MAX_PIXEL + dmaYoffset;
-        DEBUG_PRINT("dma ok\r\n");
+        // DEBUG_PRINT("dma ok\r\n");
     }
 
 #else

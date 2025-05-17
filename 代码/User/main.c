@@ -25,7 +25,7 @@ int main(void)
 {
 
   /*********************基本内容初始化******************************/
-  SystemCoreClockUpdate(); // 48000000系统时钟刷新3324-3212=100k
+  SystemInit();//48000000系统时钟
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
   USART_Printf_Init(115200); // 串口初始化需要在打印前，不然会卡死3956-3324=600k
   DEBUG_PRINT("\r\nSystemClk:%d\r\n", SystemCoreClock);
@@ -42,7 +42,6 @@ int main(void)
   Check_Reset_Flag(); // 查询复位原因
 #endif
   My_GPIO_Init(); // IO口初始化****4484-4232=252字节
-
 
 #if ENCODER_ENABLED
   TIM2_Init(11, 1); // 编码器的内容,重载值为65535，不分频，1圈12个****6020-6900=880字节输入捕获要500多+定时器300
@@ -66,8 +65,6 @@ int main(void)
 #if SLEEP == 1
   AWU_Init(); // 唤醒时间为25/12.5大约是2s左右。
 #endif
-
-
 
   while (1)
   {

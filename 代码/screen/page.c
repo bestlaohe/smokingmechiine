@@ -46,32 +46,26 @@ void clamp_value(int *value, int min, int max)
 void FAN_SetSpeed(uint8_t percentage)
 {
 
-
   // 确保百分比在0-100范围内
   if (percentage > 100)
     percentage = 100;
 
-
-
   // 设置风扇PWM输出
   TIM1->CH2CVR = percentage;
-  WS2812_show_status(1,percentage);
+  WS2812_show_status(1, percentage);
 }
 
 // 照明LED亮度控制函数
 void LED_SetLight(uint8_t percentage)
 {
 
-
   // 确保百分比在0-100范围内
   if (percentage > 100)
     percentage = 100;
 
-
-
   // 设置照明LED PWM输出
   TIM1->CH1CVR = percentage;
-   WS2812_show_status(0,percentage);
+  WS2812_show_status(0, percentage);
 }
 
 // 更新当前设置值
@@ -149,7 +143,7 @@ void display_settings(sFONT *Font)
   {
     // 清屏
     // Screen_Clear(0, 0, LCD_WIDTH, LCD_HEIGHT, MY_THEME_BACK_COLOR);
- charge.needShowBattery = 1;
+    charge.needShowBattery = 1;
 
     // 吸烟机
     Paint_DrawString(0, 0, "234", &Font16_setting, MY_THEME_BACK_COLOR, MY_THEME_COMPONT_COLOR, '0', 999);
@@ -201,12 +195,10 @@ void setting_page(sFONT *Font)
   // 处理编码器和按键事件
   handle_setting_event();
 
- if (*settings[1].value!=0&&*settings[2].value!=0)
+  if (*settings[1].value != 0 && *settings[2].value != 0)
   {
     refresh_SleepCounter(0); // 刷新休眠时间
   }
-
- 
 }
 
 // 主页面显示函数
