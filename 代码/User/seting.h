@@ -60,7 +60,7 @@
     #define SLEEP 0   //是否要休眠//千万记得休眠的时候串口被反初始化了，不要打印东西，不然会卡死
   
 #else
-    #define DEBUG_PRINT(fmt, ...)
+    #define DEBUG_PRINT(fmt, ...)   my_uart_print(fmt)
     #define SLEEP 1   //是否要休眠
 
 #endif
@@ -82,6 +82,6 @@
 #define LORA_ENABLED     0  // LoRa组件使能
 #define SCREEN_ENABLED   1  // 屏幕组件使能
 #define ENCODER_ENABLED  1  // 编码器组件使能
-#define BATTERY_ENABLED  1  // 电池组件使能
+#define BATTERY_ENABLED  0  // 电池组件使能
 
 #endif /* USER_SETING_H_ */

@@ -42,8 +42,8 @@ void TIM2_IRQHandler()
   if (TIM_GetITStatus(TIM2, TIM_IT_Update))
   {
 
-    //     DEBUG_PRINT("当前计数=%d\r\n", tempcnt);
-    //     DEBUG_PRINT("重装载值=%d\r\n", temparr);
+        DEBUG_PRINT("当前计数=%d\r\n", tempcnt);
+        DEBUG_PRINT("重装载值=%d\r\n", temparr);
 
     if (tempcnt < temparr / 2)
     {
@@ -303,8 +303,8 @@ void system_wokeup()
 
   if (needSleep) // 已经休眠了
   {
-      SystemInit();
-     My_GPIO_Init();                                                    // IO口初始化****4484-4232=252字节
+    SystemInit();
+    My_GPIO_Init();                                                    // IO口初始化****4484-4232=252字节
     TIM1_Init(100, (SystemCoreClock / (100 * PWM_FRE)) - 1, PWM_Duty); // 屏幕的背光调节  默认百分百亮度******5076-4484=592字节pwm要200多+定时器300
 
 #if ENCODER_ENABLED
@@ -354,10 +354,10 @@ void system_enter_sleep()
     TIM2_DeInit(); // 编码器用
 #endif
 
-   USART_DeInit(USART1);
+    USART_DeInit(USART1);
 
-   WS2812_SetAll(0, 0, 0);
-   WS2812_Update();
+    WS2812_SetAll(0, 0, 0);
+    WS2812_Update();
     needDeinit = 0;
   }
 }

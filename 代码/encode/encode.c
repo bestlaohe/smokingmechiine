@@ -31,7 +31,7 @@ void Encoder_Scan()
       encode_struct.state = ENCODE_EVENT_UP;
       DEBUG_PRINT("Encoder up\r\n");
     }
- 
+
     if (precircle * 12 + precnt < circle * 12 + TIM2->CNT)
     {
       encode_struct.state = ENCODE_EVENT_DOWN;

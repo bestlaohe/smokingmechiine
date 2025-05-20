@@ -80,7 +80,7 @@ void Delay_Ms(uint32_t n)
         ;
     SysTick->CTLR &= ~(1 << 0);
 
-    // DEBUG_PRINT("Delay_Ms=%d\r\n",n); 
+    // DEBUG_PRINT("Delay_Ms=%d\r\n",n);
 }
 
 /*********************************************************************
@@ -163,18 +163,18 @@ void SDI_Printf_Enable(void)
 
 void my_uart_print(char *str)
 {
-
-          while (*str)
-          {
-              // 等待 USART1 的传输完成标志
-              while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET)
-                  ;
-              // 发送一个字符
-              USART_SendData(USART1, *str++);
-          }
-
-
-
+  
+    if ((RCC->APB2PCENR & RCC_APB2Periph_USART1)==0) {
+         return;
+    }
+    while (*str)
+    {
+        // 等待 USART1 的传输完成标志
+        while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET)
+            ;
+        // 发送一个字符
+        USART_SendData(USART1, *str++);
+    }
 }
 /*********************************************************************
  * @fn      _write
@@ -298,7 +298,7 @@ void intToStr(int num, char *str, int minWidth)
 
 void Check_Reset_Flag()
 {
-  
+
     if ((RCC->RSTSCKR & (1 << (25 + PINRST_FLAG))) != RESET)
     {
         DEBUG_PRINT("PINRST_FLAG\r\n");
@@ -325,6 +325,4 @@ void Check_Reset_Flag()
     }
 
     RCC->RSTSCKR |= (1 << 24); /* clear reset flag */
-
-  
 }
