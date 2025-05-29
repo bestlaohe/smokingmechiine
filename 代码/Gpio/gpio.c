@@ -22,8 +22,7 @@ void My_GPIO_Init()
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR, ENABLE);
 
 
-    // PC7 - RGB 控制
-    GPIO_Init_Pin(GPIOC, GPIO_Pin_7, GPIO_Mode_Out_PP);
+
 
     // PA1 - 电池电量检测 (ADC输入)
     GPIO_Init_Pin(GPIOA, GPIO_Pin_1, GPIO_Mode_AIN);
@@ -36,14 +35,17 @@ void My_GPIO_Init()
     
     // PC1 - 充电状态检测 (GPIO输入，检测充电状态)
     GPIO_Init_Pin(GPIOC, GPIO_Pin_1, GPIO_Mode_IPU);
-    
+
+    // PC7 - 显示屏SPI_CS (SPI片选信号)
+    GPIO_Init_Pin(GPIOC, GPIO_Pin_7, GPIO_Mode_Out_PP);
+
     // PC2 - 显示屏DC (数据/命令选择线)
     GPIO_Init_Pin(GPIOC, GPIO_Pin_2, GPIO_Mode_Out_PP);
     
     // PC3 - 屏幕背光PWM控制 (TIM1_CH3输出，控制背光PWM)
     GPIO_Init_Pin(GPIOC, GPIO_Pin_3, GPIO_Mode_AF_PP);
     
-    // PC4 - 显示屏SPI_CS (SPI片选信号)
+    // PC4 - RGB 控制 
     GPIO_Init_Pin(GPIOC, GPIO_Pin_4, GPIO_Mode_Out_PP);
     
     // PC5 - 显示屏SPI_SCK (SPI时钟信号)

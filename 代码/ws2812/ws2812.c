@@ -17,69 +17,69 @@ static volatile uint8_t led_buffer[LED_NUM][3] = {0};
 void WS2812_0(void)  // 输出0码
 {
     /* T0H - 300ns , T0L - 600ns */
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);  // 7个高电平时间 45ns
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BCR = GPIO_Pin_7;                            // 15个低电平时间 40ns
-    GPIOC->BCR = GPIO_Pin_7;
-    GPIOC->BCR = GPIO_Pin_7;
-    GPIOC->BCR = GPIO_Pin_7;
-    GPIOC->BCR = GPIO_Pin_7;
-    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);  // 7个高电平时间 45ns
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BCR = GPIO_Pin_4;                            // 15个低电平时间 40ns
+    GPIOC->BCR = GPIO_Pin_4;
+    GPIOC->BCR = GPIO_Pin_4;
+    GPIOC->BCR = GPIO_Pin_4;
+    GPIOC->BCR = GPIO_Pin_4;
+    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
 }
 
 void WS2812_1(void)  // 输出1码
 {
     /* T1H - 600ns , T1L - 600ns */
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);  // 14个高电平时间 45ns
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BSHR = (GPIO_Pin_7 & (uint32_t)0x0000FFFF);
-    GPIOC->BCR = GPIO_Pin_7;                            // 15个低电平时间 40ns
-    GPIOC->BCR = GPIO_Pin_7;
-    GPIOC->BCR = GPIO_Pin_7;
-    GPIOC->BCR = GPIO_Pin_7;
-    GPIOC->BCR = GPIO_Pin_7;
-    GPIOC->BCR = GPIO_Pin_7;
-    GPIOC->BCR = GPIO_Pin_7;
-    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
-//    GPIOC->BCR = GPIO_Pin_7;
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);  // 14个高电平时间 45ns
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BSHR = (GPIO_Pin_4 & (uint32_t)0x0000FFFF);
+    GPIOC->BCR = GPIO_Pin_4;                            // 15个低电平时间 40ns
+    GPIOC->BCR = GPIO_Pin_4;
+    GPIOC->BCR = GPIO_Pin_4;
+    GPIOC->BCR = GPIO_Pin_4;
+    GPIOC->BCR = GPIO_Pin_4;
+    GPIOC->BCR = GPIO_Pin_4;
+    GPIOC->BCR = GPIO_Pin_4;
+    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
+//    GPIOC->BCR = GPIO_Pin_4;
 }
 
 void WS2812_Reset(void)  // 输出Reset码
 {
     /* RES 低电平280us以上 */
-    GPIOC->BCR = GPIO_Pin_7;
+    GPIOC->BCR = GPIO_Pin_4;
 
     Delay_Ms(50);
 }

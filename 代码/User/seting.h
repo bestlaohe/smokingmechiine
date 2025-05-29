@@ -82,6 +82,6 @@
 #define LORA_ENABLED     0  // LoRa组件使能
 #define SCREEN_ENABLED   1  // 屏幕组件使能
 #define ENCODER_ENABLED  1  // 编码器组件使能
-#define BATTERY_ENABLED  0  // 电池组件使能
+#define BATTERY_ENABLED  1  // 电池组件使能
 
 #endif /* USER_SETING_H_ */
