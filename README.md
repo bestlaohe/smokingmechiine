@@ -138,4 +138,7 @@ graph TD
 4. 成本分解明细
 5. 版本控制记录
 
+如果你觉得有用可以请我喝杯咖啡！
+![348f36a8640adfb87dfc8b97301e098a](https://github.com/user-attachments/assets/936dc748-7e44-42b0-9d26-6ec06679dc4f)
+
 【帅气的带焊接补光的吸烟机-哔哩哔哩】 https://b23.tv/cCpQy1C
